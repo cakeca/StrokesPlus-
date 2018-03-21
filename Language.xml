@@ -1,0 +1,614 @@
+<language name="Chinese_Simplified" author="官方論壇@ETime" url="http://weibo.com/rb30" contact="rb_30@163.com" version="2.8.6.4以下">
+	<Base>
+		<Messages>
+			<AlreadyRunning>StrokesPlus已經運行。
+如果你想運行另一個StrokesPlus請點擊【是】。</AlreadyRunning>
+			<AlreadyRunningTitle>故意還是眼花了？</AlreadyRunningTitle>
+			<OtherGestureAppRunning>下列程序中至少一個正在運行：
+StrokeIt
+High Sign
+Sensiva
+Mouse Wrangler
+gMote
+MaZZicK
+Just Gestures
+確保我們中只有一個是激活的，否則可能會有問題。
+要禁用此提示，設置StrokesPlus.xml中的CheckForOtherGesturePrograms為0。</OtherGestureAppRunning>
+			<OtherGestureAppRunningTitle>掛鉤衝突</OtherGestureAppRunningTitle>
+			<RequiresAdmin>StrokesPlus需要管理員特權才能運行。不便之處見諒。
+真的，考慮一下，如果你沒有管理員權限，你可能不應該使用這個程序。:-)</RequiresAdmin>
+			<RequiresAdminTitle>啊哦！</RequiresAdminTitle>
+			<ForegroundLockTimeout>Foreground Lock Timeout &gt; 0
+未能成功把窗口提到前面。
+你想更新這個設置嗎？</ForegroundLockTimeout>
+			<ForegroundLockTimeoutTitle>提前和居中！</ForegroundLockTimeoutTitle>
+			<ForegroundLockTimeoutFail>更新設置失敗。
+還有問題你可以試試重裝軟件。</ForegroundLockTimeoutFail>
+			<ForegroundLockTimeoutFailTitle>/wrist</ForegroundLockTimeoutFailTitle>
+			<SaveConfigFail>寫入StrokesPlus.xml失敗。
+如果問題還存在，你的配置文件可能損壞或者你無權更新文件；刪除 StrokesPlus.xml 將重建該文件，但所有手勢和操作定義都會丟失。</SaveConfigFail>
+			<SaveConfigFailTitle>保存失敗！</SaveConfigFailTitle>
+			<LoadConfigFail>加載StrokesPlus.xml失敗。
+如果問題還存在，你的配置文件可能損壞；刪除 StrokesPlus.xml 將重建該文件，但所有手勢和操作定義都會丟失。</LoadConfigFail>
+			<LoadConfigFailTitle>加載失敗！</LoadConfigFailTitle>
+			<LoadActionsFail>加載ActionHelp.xml失敗。試試下載StrokesPlus便攜版 ZIP包替換這個文件。
+這不是致命錯誤，但是你在有效操作下拉列表中將看不到東西。</LoadActionsFail>
+			<LoadActionsFailTitle>加載操作幫助文件失敗</LoadActionsFailTitle>
+			<LuaScriptError>Lua腳步錯誤！</LuaScriptError>
+			<GestureTooShortTitle>手勢太短</GestureTooShortTitle>
+			<GestureTooShortMessage>請畫一個更長的手勢</GestureTooShortMessage>
+			<AdminModeTitle>管理員</AdminModeTitle>
+			<AdminModeMessage>從2.2.1版開始，運行StrokesPlus不再需要管理員權限。
+對於大多數用途，這是可以接受的。然而，你會遇到一些意想不到的事情。
+例如，S+將無法控制其他以提升權限運行程序，並有可能對於那些需要管理員特權的Windows底層調用操作將失效。
+如果你喜歡以提升權限運行S +，你可以用鼠標右鍵單擊的StrokesPlus.exe文件，選擇屬性 - &gt;兼容性 - &gt;「以管理員身份運行此程序」。
+然而，即使以管理員權限運行S+仍不能隨系統自動啟動。</AdminModeMessage>
+			<Win8LauncherTitle>Windows 8 適用性</Win8LauncherTitle>
+			<Win8LauncherMessage>由於Windows 8的變化，S +對於某些Windows 8屏幕可能沒作用，除非你禁用UAC或使用已簽名的S +。
+			
+更多細節請看以下帖子：
+
+http://www.strokesplus.com/windows8</Win8LauncherMessage>
+			<TouchPadNotSupportedTitle>不支持觸摸板</TouchPadNotSupportedTitle>
+			<TouchPadNotSupportedMessage>不支持觸摸板。
+
+要麼它不是一個觸摸板，要麼不具備多指觸控功能，或者是初始化設備時遇到錯誤。
+
+觸摸板支持將被禁止；你可以在「首選項」選項卡重新啟用支持。</TouchPadNotSupportedMessage>
+			<ReloadSettingsOpenTitle>臣妾做不到啊！</ReloadSettingsOpenTitle>
+			<ReloadSettingsOpenMessage>請在調用acReload()前關閉所有StrokesPlus窗口。</ReloadSettingsOpenMessage>
+		</Messages>
+	</Base>
+	<Settings>
+		<Title>StrokesPlus 中文版</Title>
+	</Settings>
+	<Gestures>
+		<Title>手勢</Title>
+		<SavedImmediately>注意：手勢更改會立即保存。</SavedImmediately>
+	</Gestures>
+	<Preferences>
+		<Title>首選項</Title>
+		<StrokeButtonFrame>
+			<Title>手勢鍵</Title>
+			<Buttons>
+				<Right>鼠標右鍵</Right>
+				<Middle>鼠標中鍵</Middle>
+				<Left>鼠標左鍵</Left>
+				<X1>鼠標X1鍵</X1>
+				<X2>鼠標X2鍵</X2>
+				<Control>Ctrl鍵</Control>
+				<Alt>Alt鍵</Alt>
+				<Shift>Shift鍵</Shift>
+				<ScrollUp>鼠標滾輪向上</ScrollUp>
+				<ScrollDown>鼠標滾輪向下</ScrollDown>
+			</Buttons>
+			<IgnoreKey>
+				<Title>忽略鍵：</Title>
+				<DropDown>
+					<Control>Ctrl鍵</Control>
+					<Alt>Alt鍵</Alt>
+					<Shift>Shift鍵</Shift>
+					<None>無</None>
+				</DropDown>
+			</IgnoreKey>
+			<CancelDelay>
+				<Title>取消延遲：</Title>
+				<Suffix>毫秒</Suffix>
+			</CancelDelay>
+		</StrokeButtonFrame>
+		<SynapticsFrame>
+			<Disable>禁用</Disable>
+			<Title>Synaptics觸摸板</Title>
+			<Fingers>
+				<One>單指（點擊&amp;按住）</One>
+				<Two>雙指</Two>
+				<Three>三指</Three>
+			</Fingers>
+			<Sensitivity>光標移動的靈敏性：</Sensitivity>
+			<Percent>%</Percent>
+			<HoldDeltaText>單指移動閾值：</HoldDeltaText>
+			<HoldDeltaSuffix>units</HoldDeltaSuffix>
+			<HoldDelayText>單指按住延遲：</HoldDelayText>
+			<HoldDelaySuffix>毫秒</HoldDelaySuffix>
+			<StrokeSequence>手勢鍵：</StrokeSequence>
+		</SynapticsFrame>
+		<StrokeStyleFrame>
+			<Title>軌跡風格</Title>
+			<Red>
+				<Title>紅色：</Title>
+				<Suffix>0-255
+				</Suffix>
+			</Red>
+			<Green>
+				<Title>綠色：</Title>
+				<Suffix>0-255</Suffix>
+			</Green>
+			<Blue>
+				<Title>藍色：</Title>
+				<Suffix>0-255</Suffix>
+			</Blue>
+			<PickColor>選擇顏色…</PickColor>
+			<Width>
+				<Title>寬度：</Title>
+				<Suffix>像素</Suffix>
+			</Width>
+			<GestureLength>
+				<Title>最小手勢長度：</Title>
+				<Suffix>像素</Suffix>
+			</GestureLength>
+			<SegmentLength>
+				<Title>最小分段長度：</Title>
+				<Suffix>像素</Suffix>
+			</SegmentLength>
+			<Length>
+				<Title>顯示長度：</Title>
+				<Suffix>points</Suffix>
+			</Length>
+			<Opacity>
+				<Title>透明度：</Title>
+				<Suffix>1~255</Suffix>
+			</Opacity>
+			<Show>
+				<Title>顯示：</Title>
+				<Yes>是</Yes>
+				<No>否</No>
+			</Show>
+		</StrokeStyleFrame>
+		<AdvancedOptionsFrame>
+			<Title>高級 / 實驗性* 選項</Title>
+			<MatchPrecision>
+				<Title>匹配精度：</Title>
+				<Suffix>points</Suffix>
+			</MatchPrecision>
+			<MatchProbability>
+				<Title>匹配概率：</Title>
+				<Suffix>%</Suffix>
+			</MatchProbability>
+			<ManageMemory>積極地管理內存</ManageMemory>
+			<Suspend>在系統掛起釋放S+或系統恢復時重新初始化S+*</Suspend>
+			<MultipleInstanceMessage>禁用運行多個StrokesPlus時的提示信息</MultipleInstanceMessage>
+			<NewGestureMessage>禁用新建手勢時的提示信息</NewGestureMessage>
+			<GestureWindowOnTop>保持手勢繪製窗口在最前面*</GestureWindowOnTop>
+			<GestureWindowToBottom>不要隱藏手勢繪製窗口*</GestureWindowToBottom>
+			<ResetCancelDelay>在鼠標移動或修飾鍵按下時重置取消延遲*</ResetCancelDelay>
+			<MouseWheelRelay>啟用鼠標滾輪中繼 *</MouseWheelRelay>
+			<RecognizeOnMouseWheel>每次鼠標滾輪滾動都觸發相應操作*</RecognizeOnMouseWheel>
+			<CaptureModifiersOnMouseDown>允許在手勢鍵按下時獲取修飾鍵狀態*</CaptureModifiersOnMouseDown>
+			<AllowMouseWheelTick>允許Mouse Wheel Tick腳本*</AllowMouseWheelTick>
+			<AllowAfterActionScript>允許After Action腳本*</AllowAfterActionScript>
+			<AllowMiddleClickScript>允許Middle Click腳本*</AllowMiddleClickScript>
+			<OnlyDefinedApps>僅捕獲已定義程序上的手勢操作（無全局操作）</OnlyDefinedApps>
+			<AllowAfterReleaseScript>允許After Release腳本*</AllowAfterReleaseScript>
+			<CheckCursorFlags>檢查光標狀態*</CheckCursorFlags>
+			<AllowLeftClickScript>允許Left Click腳本*</AllowLeftClickScript>
+			<AllowRightClickScript>允許Right Click腳本*</AllowRightClickScript>
+			<AllowX1ClickScript>允許X1 Click腳本*</AllowX1ClickScript>
+			<AllowX2ClickScript>允許X2 Click腳本*</AllowX2ClickScript>
+			<AllowHorzMouseWheelTick>允許Horizontal Mouse Wheel Tick腳本*</AllowHorzMouseWheelTick>
+			<RelayGestureOnNoMatch>無匹配時轉發手勢給原始程序*</RelayGestureOnNoMatch>
+			<NoMatchSound>無匹配時播放聲音</NoMatchSound>
+			<NoMatchSoundFile>
+				<Title>聲音：</Title>
+				<Test>試聽</Test>
+				<Browse>選擇…</Browse>
+			</NoMatchSoundFile>
+		</AdvancedOptionsFrame>
+		<Help>幫助</Help>
+		<Save>應用</Save>
+		<OK>確定</OK>
+		<Cancel>取消</Cancel>
+	</Preferences>
+	<Actions>
+		<Title>配置操作</Title>
+		<AddAppPopupTitle>添加程序</AddAppPopupTitle>
+		<AddActionPopupTitle>添加操作</AddActionPopupTitle>
+		<RenameAppPopupTitle>重命名程序</RenameAppPopupTitle>
+		<RenameActionPopupTitle>重命名操作</RenameActionPopupTitle>
+		<RenameGesturePopupTitle>重命名手勢</RenameGesturePopupTitle>
+		<GlobalActions>全局操作</GlobalActions>
+		<GestureFrame>
+			<Title>手勢</Title>
+			<New>新建</New>
+			<Rename>重命名</Rename>
+			<Delete>刪除</Delete>
+		</GestureFrame>
+		<MouseKeyModifierFrame>
+			<Title>鼠標/修飾鍵</Title>
+			<Right>鼠標右鍵</Right>
+			<Middle>鼠標中鍵</Middle>
+			<Left>鼠標左鍵</Left>
+			<X1>鼠標X1鍵</X1>
+			<X2>鼠標X2鍵</X2>
+			<Control>Ctrl鍵</Control>
+			<Alt>Alt鍵</Alt>
+			<Shift>Shift鍵</Shift>
+			<ScrollUp>鼠標滾輪前滾</ScrollUp>
+			<ScrollDown>鼠標滾輪後滾</ScrollDown>
+		</MouseKeyModifierFrame>
+		<ModifierPress>
+			<Title>檢查修飾鍵</Title>
+			<Before>手勢鍵按下前</Before>
+			<After>手勢鍵按下後</After>
+			<Either>二者之一</Either>
+		</ModifierPress>
+		<AvailableActionsFrame>
+			<Title>可用操作</Title>
+			<Info>信息</Info>
+			<Insert>插入</Insert>
+			<Messages>
+				<Info>
+					<Description>說明：</Description>
+					<Usage>用法：</Usage>
+					<Returns>返回值：</Returns>
+					<Parameters>參數：</Parameters>
+				</Info>
+			</Messages>
+		</AvailableActionsFrame>
+		<Application>
+			<OwnerTitle>窗口標題：</OwnerTitle>
+			<OwnerTitlePattern>窗口標題模板：</OwnerTitlePattern>
+			<OwnerClassName>窗口類名：</OwnerClassName>
+			<OwnerClassNamePattern>窗口類名模板：</OwnerClassNamePattern>
+			<ParentTitle>父控件標題：</ParentTitle>
+			<ParentTitlePattern>父控件標題模板：</ParentTitlePattern>
+			<ParentClassName>父控件類名：</ParentClassName>
+			<ParentClassNamePattern>父控件類名模板：</ParentClassNamePattern>
+			<ControlTitle>控件標題：</ControlTitle>
+			<ControlTitlePattern>控件標題模板：</ControlTitlePattern>
+			<ControlClassName>控件類名：</ControlClassName>
+			<ControlClassNamePattern>控件類名模板：</ControlClassNamePattern>
+			<ControlID>控件ID：</ControlID>
+			<FilePathPattern>文件路徑模板：</FilePathPattern>
+			<FileName>文件名：</FileName>
+			<FileNamePattern>文件名模板：</FileNamePattern>
+			<DoNotProcess>本程序不處理全局操作</DoNotProcess>
+			<FindWindowFrame>查找窗口</FindWindowFrame>
+			<Qualifiers>當手勢鍵按下時，在此列表中的所有限定詞將用於判斷程序是否匹配。
+
+模板字段用於正則表達式。
+
+只有一個字段是必需的，很多時候，保留文件名就足夠了。</Qualifiers>
+			<Active>程序有效</Active>
+		</Application>
+		<FormText>
+			<NoGestureRequired>↑去「首選項」勾選「允許在手勢鍵按下時獲取修飾鍵狀態」啟動以上功能。
+
+
+←你不必選擇一個手勢，修飾鍵可以單獨定義一個操作。</NoGestureRequired>
+			<LuaScriptTitle>Lua腳本：</LuaScriptTitle>
+		</FormText>
+		<FormButtons>
+			<AddApp>添加程序</AddApp>
+			<AddAction>添加操作</AddAction>
+			<Rename>重命名</Rename>
+			<Delete>刪除</Delete>
+			<Save>保存</Save>
+			<Autosave>自動保存</Autosave>
+			<Report>報告</Report>
+			<Help>幫助</Help>
+			<Close>關閉</Close>
+		</FormButtons>
+		<Messages>
+			<CloseNameWindow>請先關閉命名窗口。</CloseNameWindow>
+			<CloseNameWindowTitle>這樣會更好</CloseNameWindowTitle>
+			<DeleteTreeItem>你確定？</DeleteTreeItem>
+			<DeleteTreeItemTitle>刪除</DeleteTreeItemTitle>
+			<NewGesture>點擊「確定」，然後繪製新手勢。窗口將會隱藏，任何東西都不會丟失。</NewGesture>
+			<NewGestureTitle>新建手勢</NewGestureTitle>
+			<DeleteGesture>你確定？</DeleteGesture>
+			<DeleteGestureTitle>刪除</DeleteGestureTitle>
+			<ActionConflict>下面的操作已經有相同的手勢/修飾鍵定義：</ActionConflict>
+			<ActionConflictSave>無論如何都保存？</ActionConflictSave>
+			<ActionConflictTitle>操作衝突</ActionConflictTitle>
+		</Messages>
+		<Active>程序有效</Active>
+	</Actions>
+	<Report>
+		<Title>操作報告</Title>
+		<TopText>這裡列出了所有已定義的操作。點擊表頭可以排序。</TopText>
+		<Columns>
+			<Gesture>手勢</Gesture>
+			<GestureName>手勢名</GestureName>
+			<Modifiers>修飾鍵</Modifiers>
+			<AppName>程序名</AppName>
+			<ActionName>操作名</ActionName>
+			<LuaScript>Lua腳本</LuaScript>
+		</Columns>
+		<Refresh>刷新</Refresh>
+		<Close>關閉</Close>
+	</Report>
+	<Ignored>
+		<Title>忽略清單</Title>
+		<AddPopupTitle>添加忽略條目</AddPopupTitle>
+		<RenamePopupTitle>重命名忽略條目</RenamePopupTitle>
+		<OwnerTitle>窗口標題：</OwnerTitle>
+		<OwnerTitlePattern>窗口標題模板：</OwnerTitlePattern>
+		<OwnerClassName>窗口類名：</OwnerClassName>
+		<OwnerClassNamePattern>窗口類名模板：</OwnerClassNamePattern>
+		<ParentTitle>父控件標題：</ParentTitle>
+		<ParentTitlePattern>父控件標題模板：</ParentTitlePattern>
+		<ParentClassName>父控件類名：</ParentClassName>
+		<ParentClassNamePattern>父控件類名模板：</ParentClassNamePattern>
+		<ControlTitle>控件標題：</ControlTitle>
+		<ControlTitlePattern>控件標題模板：</ControlTitlePattern>
+		<ControlClassName>控件類名：</ControlClassName>
+		<ControlClassNamePattern>控件類名模板：</ControlClassNamePattern>
+		<ControlID>控件ID：</ControlID>
+		<FileName>文件名：</FileName>
+		<FilePathPattern>文件路徑模板：</FilePathPattern>
+		<FileNamePattern>文件名模板：</FileNamePattern>
+		<FindWindowFrame>查找窗口</FindWindowFrame>
+		<DisableOnActivate>如果此程序被激活則禁用S+</DisableOnActivate>
+		<Qualifiers>當手勢鍵按下時，任何與列表中的限定詞匹配的程序將會被忽略。
+
+模板字段用於正則表達式。
+
+只有一個字段是必需的。</Qualifiers>
+		<Active>規則有效</Active>
+		<Help>幫助</Help>
+		<Close>關閉</Close>
+		<Add>添加</Add>
+		<Rename>重命名</Rename>
+		<Delete>刪除</Delete>
+		<Save>保存</Save>
+		<EnableOnNoIgnore>如果非忽略程序被激活就啟用S+</EnableOnNoIgnore>
+		<Messages>
+			<CloseNameWindow>請先關閉命名窗口。</CloseNameWindow>
+			<CloseNameWindowTitle>這樣會更好</CloseNameWindowTitle>
+			<DeleteItem>你確定？</DeleteItem>
+			<DeleteItemTitle>刪除</DeleteItemTitle>
+		</Messages>
+	</Ignored>
+	<Name>
+		<Title>名稱</Title>
+		<Name>名稱：</Name>
+		<Messages>
+			<IgnoredExists>同名的忽略條目已存在，請輸入一個不同的名字。</IgnoredExists>
+			<IgnoredExistsTitle>名稱已存在</IgnoredExistsTitle>
+			<AppExists>同名的程序已存在，請輸入一個不同的名字。</AppExists>
+			<AppExistsTitle>名稱已存在</AppExistsTitle>
+			<ActionExists>同名的操作已存在，請輸入一個不同的名字。</ActionExists>
+			<ActionExistsTitle>名稱已存在</ActionExistsTitle>
+			<GestureExists>同名的手勢已存在，請輸入一個不同的名字。</GestureExists>
+			<GestureExistsTitle>名稱已存在</GestureExistsTitle>
+			<HotkeyExists>同名的快捷鍵已存在，請輸入一個不同的名字。</HotkeyExists>
+			<HotkeyExistsTitle>名稱已存在</HotkeyExistsTitle>
+		</Messages>
+		<OK>確定</OK>
+		<Cancel>取消</Cancel>
+	</Name>
+	<SaveGesture>
+		<Title>保存手勢</Title>
+		<NameGesture>你想要如何命名這個手勢？</NameGesture>
+		<Info>輸入已存在的手勢名字將把當前的手勢樣式加入到原來的手勢中。
+多個樣本可以提高識別率。</Info>
+		<Save>保存</Save>
+		<Cancel>取消</Cancel>
+	</SaveGesture>
+	<Menu>
+		<CloseMenu>關閉菜單</CloseMenu>
+		<TrainingMode>訓練模式</TrainingMode>
+		<Right>使用鼠標右鍵</Right>
+		<Middle>使用鼠標中鍵</Middle>
+		<Left>使用鼠標左鍵</Left>
+		<X1>使用鼠標X1鍵</X1>
+		<X2>使用鼠標X2鍵</X2>
+		<Control>使用Ctrl鍵</Control>
+		<Alt>使用Alt鍵</Alt>
+		<Shift>使用Shift鍵</Shift>
+		<DrawGestures>畫出手勢</DrawGestures>
+		<Disable>禁用StrokesPlus</Disable>
+		<Ignored>忽略清單…</Ignored>
+		<Hotkeys>配置快捷鍵…</Hotkeys>
+		<Actions>配置操作…</Actions>
+		<Preferences>首選項…</Preferences>
+		<Reload>重載設置和Lua引擎</Reload>
+		<Password>密碼…</Password>
+		<About>關於</About>
+		<Help>幫助</Help>
+		<Exit>退出</Exit>
+		<Cut>剪切</Cut>
+		<Copy>複製</Copy>
+		<Paste>粘貼</Paste>
+	</Menu>
+	<Icon>
+		<NormalCaption>StrokesPlus - 使用中</NormalCaption>
+		<TrainingCaption>StrokesPlus - 訓練模式</TrainingCaption>
+		<DisabledCaption>StrokesPlus - 禁用中</DisabledCaption>
+		<IgnoringGestures>StrokesPlus - 忽略手勢</IgnoringGestures>
+	</Icon>
+	<About>
+		<Title>關於</Title>
+		<Close>關閉</Close>
+		<StrokesPlus>StrokesPlus 翻譯 by ETime</StrokesPlus>
+		<Version>版本：</Version>
+		<ReleaseDate>發佈日期：</ReleaseDate>
+	</About>
+	<LuaTab>
+		<Title>全局Lua</Title>
+		<Text>下面是您的StrokesPlus.lua文件中的Lua代碼。您可以利用這個文件存儲那些可以訪問所有操作腳本的函數或變量。
+點擊「應用」或「確定」時所做的更改將立即被保存並加載到Lua引擎。</Text>
+	</LuaTab>
+	<Password>
+		<Title>輸入密碼</Title>
+		<ChangeTitle>更改密碼</ChangeTitle>
+		<SetText>輸入的密碼將用於加密您的配置文件和限制訪問配置窗口。</SetText>
+		<EnterText>您必須輸入密碼來啟動StrokesPlus，或訪問配置窗口。</EnterText>
+		<ChangeText>輸入當前的密碼和一個新密碼。如果新密碼字段為空，密碼保護將被刪除。</ChangeText>
+		<Password>密碼：</Password>
+		<CurrentPassword>原密碼：</CurrentPassword>
+		<NewPassword>新密碼：</NewPassword>
+		<OK>確定</OK>
+		<Cancel>取消</Cancel>
+		<MatchFailMessage>密碼錯誤。</MatchFailMessage>
+		<MatchFailTitle>囧！</MatchFailTitle>
+	</Password>
+	<Hotkeys>
+		<Title>配置快捷鍵</Title>
+		<HotkeysFrame>
+			<Title>快捷鍵</Title>
+			<Modifiers>
+				<None>無</None>
+				<Control>Ctrl鍵</Control>
+				<Alt>Alt鍵</Alt>
+				<Shift>Shift鍵</Shift>
+				<Win>Win鍵</Win>
+			</Modifiers>
+			<Modifier1>修飾鍵 1:</Modifier1>
+			<Modifier2>修飾鍵 2:</Modifier2>
+			<Modifier3>修飾鍵 3:</Modifier3>
+			<Modifier4>修飾鍵 4:</Modifier4>
+			<Key>按鍵</Key>
+			<Keys>
+				<None>無</None>
+				<0>0</0>
+				<1>1</1>
+				<2>2</2>
+				<3>3</3>
+				<4>4</4>
+				<5>5</5>
+				<6>6</6>
+				<7>7</7>
+				<8>8</8>
+				<9>9</9>
+				<NUMPAD0>小鍵盤 0</NUMPAD0>
+				<NUMPAD1>小鍵盤 1</NUMPAD1>
+				<NUMPAD2>小鍵盤 2</NUMPAD2>
+				<NUMPAD3>小鍵盤 3</NUMPAD3>
+				<NUMPAD4>小鍵盤 4</NUMPAD4>
+				<NUMPAD5>小鍵盤 5</NUMPAD5>
+				<NUMPAD6>小鍵盤 6</NUMPAD6>
+				<NUMPAD7>小鍵盤 7</NUMPAD7>
+				<NUMPAD8>小鍵盤 8</NUMPAD8>
+				<NUMPAD9>小鍵盤 9</NUMPAD9>
+				<Multiply>小鍵盤 *</Multiply>
+				<Add>小鍵盤 +</Add>
+				<Subtract>小鍵盤 -</Subtract>
+				<Decimal>小鍵盤 .</Decimal>
+				<Divide>小鍵盤 /</Divide>
+				<A>A</A>
+				<B>B</B>
+				<C>C</C>
+				<D>D</D>
+				<E>E</E>
+				<F>F</F>
+				<G>G</G>
+				<H>H</H>
+				<I>I</I>
+				<J>J</J>
+				<K>K</K>
+				<L>L</L>
+				<M>M</M>
+				<N>N</N>
+				<O>O</O>
+				<P>P</P>
+				<Q>Q</Q>
+				<R>R</R>
+				<S>S</S>
+				<T>T</T>
+				<U>U</U>
+				<V>V</V>
+				<W>W</W>
+				<X>X</X>
+				<Y>Y</Y>
+				<Z>Z</Z>
+				<F1>F1</F1>
+				<F2>F2</F2>
+				<F3>F3</F3>
+				<F4>F4</F4>
+				<F5>F5</F5>
+				<F6>F6</F6>
+				<F7>F7</F7>
+				<F8>F8</F8>
+				<F9>F9</F9>
+				<F10>F10</F10>
+				<F11>F11</F11>
+				<F12>F12</F12>
+				<BACKSLASH>反斜線 \</BACKSLASH>
+				<BACKSPACE>退格鍵</BACKSPACE>
+				<CAPSLOCK>CAPS LOCK鍵</CAPSLOCK>
+				<COMMA>逗號 ,</COMMA>
+				<DASH>破折號 -</DASH>
+				<DELETE>DELETE鍵</DELETE>
+				<DOWNARROW>↓鍵</DOWNARROW>
+				<END>END鍵</END>
+				<ENTER>ENTER鍵</ENTER>
+				<ESCAPE>ESC鍵</ESCAPE>
+				<GRAVE>波浪號 ~</GRAVE>
+				<HOME>HOME鍵</HOME>
+				<INSERT>INSERT鍵</INSERT>
+				<LEFTARROW>←鍵</LEFTARROW>
+				<LBRACE>左括號 [</LBRACE>
+				<NUMLOCK>NUM LOCK鍵</NUMLOCK>
+				<PAGEDOWN>PAGE DOWN鍵</PAGEDOWN>
+				<PAGEUP>PAGE UP鍵</PAGEUP>
+				<PAUSE>PAUSE鍵</PAUSE>
+				<PERIOD>句號 .</PERIOD>
+				<PRINTSCREEN>PRINT SCREEN鍵</PRINTSCREEN>
+				<QUOTE>引號 '</QUOTE>
+				<RIGHTARROW>→鍵</RIGHTARROW>
+				<RBRACE>右括號 ]</RBRACE>
+				<SCROLLLOCK>SCROLL LOCK鍵</SCROLLLOCK>
+				<SLASH>斜線 /</SLASH>
+				<SPACEBAR>空格鍵</SPACEBAR>
+				<TAB>TAB鍵</TAB>
+				<UPARROW>↑鍵</UPARROW>
+
+				<BROWSER_BACK>瀏覽器後退</BROWSER_BACK>
+				<BROWSER_FORWARD>瀏覽器前進</BROWSER_FORWARD>
+				<BROWSER_REFRESH>瀏覽器刷新</BROWSER_REFRESH>
+				<BROWSER_STOP>瀏覽器停止</BROWSER_STOP>
+				<BROWSER_SEARCH>瀏覽器查找</BROWSER_SEARCH>
+				<BROWSER_FAVORITES>瀏覽器收藏夾</BROWSER_FAVORITES>
+				<BROWSER_HOME>瀏覽器主頁</BROWSER_HOME>
+				<VOLUME_MUTE>音量靜音</VOLUME_MUTE>
+				<VOLUME_DOWN>音量減</VOLUME_DOWN>
+				<VOLUME_UP>音量加</VOLUME_UP>
+				<MEDIA_NEXT_TRACK>媒體下一首</MEDIA_NEXT_TRACK>
+				<MEDIA_PREV_TRACK>媒體上一首</MEDIA_PREV_TRACK>
+				<MEDIA_STOP>媒體停止</MEDIA_STOP>
+				<MEDIA_PLAY_PAUSE>媒體播放/暫停</MEDIA_PLAY_PAUSE>
+				<LAUNCH_MAIL>啟動電子郵件客戶端</LAUNCH_MAIL>
+				<LAUNCH_MEDIA_SELECT>啟動媒體選擇</LAUNCH_MEDIA_SELECT>
+				<LAUNCH_APP1>啟動程序1</LAUNCH_APP1>
+				<LAUNCH_APP2>啟動程序2</LAUNCH_APP2>				
+			</Keys>
+		</HotkeysFrame>
+		<FormText>
+			<LuaScriptTitle>Lua 腳本:</LuaScriptTitle>
+			<InfoText>快捷鍵是每當你按下相應的按鍵組合都會激發的全局操作。
+
+請注意，鼠標相關的變量不能傳遞到快捷鍵Lua腳本；如gsx，gwd等等。</InfoText>
+		</FormText>
+		<FormButtons>
+			<AddHotkey>添加快捷鍵</AddHotkey>
+			<Rename>重命名</Rename>
+			<Delete>刪除</Delete>
+		</FormButtons>
+		<AvailableActionsFrame>
+			<Title>可用操作</Title>
+			<Info>信息</Info>
+			<Insert>插入</Insert>
+			<Messages>
+				<InfoPopup>
+					<Description>說明：</Description>
+					<Usage>用法：</Usage>
+					<Returns>返回值：</Returns>
+					<Parameters>參數：</Parameters>
+				</InfoPopup>
+			</Messages>
+		</AvailableActionsFrame>
+		<AddHotkeyPopupTitle>添加快捷鍵</AddHotkeyPopupTitle>
+		<RenameHotkeyPopupTitle>重命名快捷鍵</RenameHotkeyPopupTitle>
+		<Active>快捷鍵有效</Active>
+		<Messages>
+			<HotkeyFailure>註冊快捷鍵失敗:</HotkeyFailure>
+			<HotkeyFailureTitle>註冊快捷鍵錯誤</HotkeyFailureTitle>
+			<HotkeyConflict>以下快捷鍵已經有相同的按鍵/修飾鍵定義:</HotkeyConflict>
+			<HotkeyConflictSave>無論如何都保存?</HotkeyConflictSave>
+			<HotkeyConflictTitle>快捷鍵衝突</HotkeyConflictTitle>
+			<DeleteTreeItem>你確定?</DeleteTreeItem>
+			<DeleteTreeItemTitle>刪除</DeleteTreeItemTitle>
+		</Messages>
+	</Hotkeys>
+</language>

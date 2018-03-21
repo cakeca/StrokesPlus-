@@ -1,0 +1,1813 @@
+<actionshelp>
+	<groups>
+		<group name="---- 1.腳本可用變量 ----">
+			<actions>
+				<action name="sp_app_name 程序名">
+					<parameters>
+					</parameters>
+					<return type="string"></return>
+					<signature>sp_app_name</signature>
+					<description>匹配程序的名稱</description>
+					<example>local strApp = sp_app_name</example>
+					<snippet>sp_app_name</snippet>
+				</action>
+				<action name="sp_action_name 操作名">
+					<parameters>
+					</parameters>
+					<return type="string"></return>
+					<signature>sp_action_name</signature>
+					<description>匹配操作的名稱</description>
+					<example>local strAction = sp_action_name</example>
+					<snippet>sp_action_name</snippet>
+				</action>
+				<action name="sp_gesture_name 手勢名">
+					<parameters>
+					</parameters>
+					<return type="string"></return>
+					<signature>sp_gesture_name</signature>
+					<description>匹配手勢的名稱</description>
+					<example>local strGesture = sp_gesture_name</example>
+					<snippet>sp_gesture_name</snippet>
+				</action>
+				<action name="sp_gesture_start_x 手勢開始X坐標">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>sp_gesture_start_x</signature>
+					<description>手勢開始時的X坐標</description>
+					<example>local iGestureStartX = sp_gesture_start_x</example>
+					<snippet>sp_gesture_start_x</snippet>
+				</action>
+				<action name="sp_gesture_start_y 手勢開始Y坐標">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>sp_gesture_start_y</signature>
+					<description>手勢開始時的Y坐標</description>
+					<example>local iGestureStartY = sp_gesture_start_y</example>
+					<snippet>sp_gesture_start_y</snippet>
+				</action>
+				<action name="sp_gesture_end_x 手勢結束X坐標">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>sp_gesture_end_x</signature>
+					<description>手勢結束時的X坐標</description>
+					<example>local iGestureEndX = sp_gesture_end_x</example>
+					<snippet>sp_gesture_end_x</snippet>
+				</action>
+				<action name="sp_gesture_end_y 手勢結束Y坐標">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>sp_gesture_end_y</signature>
+					<description>手勢結束時的Y坐標</description>
+					<example>local iGestureEndY = sp_gesture_end_y</example>
+					<snippet>sp_gesture_end_y</snippet>
+				</action>
+				<action name="sp_wheel_delta 滾輪增量差值">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>sp_wheel_delta</signature>
+					<description>鼠標滾輪滾動的增量差值【正數或負數】，標準鼠標滾輪每滾一下為120。</description>
+					<example>local iGestureWheelDelta = sp_wheel_delta</example>
+					<snippet>sp_wheel_delta</snippet>
+				</action>
+				<action name="gapp 程序名">
+					<parameters>
+					</parameters>
+					<return type="string"></return>
+					<signature>gapp</signature>
+					<description>匹配程序的名稱</description>
+					<example>local strApp = gapp</example>
+					<snippet>gapp</snippet>
+				</action>
+				<action name="gact 操作名">
+					<parameters>
+					</parameters>
+					<return type="string"></return>
+					<signature>gact</signature>
+					<description>匹配操作的名稱</description>
+					<example>local strAction = gact</example>
+					<snippet>gact</snippet>
+				</action>
+				<action name="gnm 手勢名">
+					<parameters>
+					</parameters>
+					<return type="string"></return>
+					<signature>gnm</signature>
+					<description>匹配手勢的名稱</description>
+					<example>local strGesture = gnm</example>
+					<snippet>gnm</snippet>
+				</action>
+				<action name="gsx 手勢開始X坐標">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gsx</signature>
+					<description>手勢開始時的X坐標</description>
+					<example>local iGestureStartX = gsx</example>
+					<snippet>gsx</snippet>
+				</action>
+				<action name="gsy 手勢開始Y坐標">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gsy</signature>
+					<description>手勢開始時的Y坐標</description>
+					<example>local iGestureStartY = gsy</example>
+					<snippet>gsy</snippet>
+				</action>
+				<action name="gex 手勢結束X坐標">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gex</signature>
+					<description>手勢結束時的X坐標</description>
+					<example>local iGestureEndX = gex</example>
+					<snippet>gex</snippet>
+				</action>
+				<action name="gey 手勢結束Y坐標">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gey</signature>
+					<description>手勢結束時的Y坐標</description>
+					<example>local iGestureEndY = gey</example>
+					<snippet>gey</snippet>
+				</action>
+				<action name="gwd 滾輪增量差值">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gwd</signature>
+					<description>鼠標滾輪滾動的增量差值【正數或負數】，標準鼠標滾輪每滾一下為120</description>
+					<example>local iGestureWheelDelta = gwd</example>
+					<snippet>gwd</snippet>
+				</action>
+				<action name="gbl 左側邊界">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gbl</signature>
+					<description>左側的坐標邊界(可畫手勢的最左側X坐標)</description>
+					<example>local iGestureBoundingLeft = gbl</example>
+					<snippet>gbl</snippet>
+				</action>
+				<action name="gbt 頂部邊界">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gbt</signature>
+					<description>頂部的坐標邊界(可畫手勢的最頂部Y坐標)</description>
+					<example>local iGestureBoundingTop = gbt</example>
+					<snippet>gbt</snippet>
+				</action>
+				<action name="gbr 右側邊界">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gbr</signature>
+					<description>右側的坐標邊界(可畫手勢的最右側X坐標)</description>
+					<example>local iGestureBoundingRight = gbr</example>
+					<snippet>gbr</snippet>
+				</action>
+				<action name="gbb 底部邊界">
+					<parameters>
+					</parameters>
+					<return type="number"></return>
+					<signature>gbb</signature>
+					<description>底部的坐標邊界(可畫手勢的最底部Y坐標)</description>
+					<example>local iGestureBoundingBottom = gbb</example>
+					<snippet>gbb</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 2.定位窗口操作 ----">
+			<actions>
+				<action name="acFindWindow 查找窗口">
+					<parameters>
+						<parameter name="classname">被尋找窗口的類名</parameter>
+						<parameter name="title">被尋找窗口的標題</parameter>
+					</parameters>
+					<return type="number">窗口句柄，找不到返回0</return>
+					<signature>acFindWindow(classname, title)</signature>
+					<description>通過類名和標題查找窗口，精確匹配。查找時通過 nil 排除任一參數。
+例如，acFindWindow("Winamp v1.x",nil)將忽略標題找出Winamp類名的窗口。</description>
+					<example>local iHandle = acFindWindow("Notepad", "Untitled - Notepad")</example>
+					<snippet>acFindWindow("class","title") --Pass nil in place of either parameter to exclude</snippet>
+				</action>
+				<action name="acFindWindowByTitleRegex 通過標題正則表達式查找窗口">
+					<signature>acFindWindowByTitleRegex(titlepattern)</signature>
+					<parameters>
+						<parameter name="titlepattern">查找窗口標題時使用的正則表達式</parameter>
+					</parameters>
+					<return type="number">窗口句柄，找不到返回0</return>
+					<description>找到第一個與標題正則表達式匹配的窗口</description>
+					<example>acFindWindowByTitleRegex(titlepattern)</example>
+					<snippet>acFindWindowByTitleRegex("titlepattern") --regular expression</snippet>
+				</action>
+				<action name="acGetAllWindows 獲取所有窗口句柄">
+					<signature>acGetAllWindows(toplevel)</signature>
+					<parameters>
+						<parameter name="toplevel">0返回所有窗口句柄（非常多），1返回top-level窗口句柄（推薦）</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>用返回的窗口句柄填充sp_all_windows表。你不需要定義sp_all_windows表。</description>
+					<example>acGetAllWindows(toplevel)</example>
+					<snippet>acGetAllWindows(1) --sample returns only top-level windows into sp_all_windows (you don't need to define this table)</snippet>
+				</action>
+				<action name="acGetOwnerWindowByPoint 通過點查找Owner窗口">
+					<signature>acGetOwnerWindowByPoint(x, y)</signature>
+					<parameters>
+						<parameter name="x">窗口的X坐標(左起)</parameter>
+						<parameter name="y">窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>返回目標窗口所屬Owner窗口的句柄</description>
+					<example>acGetOwnerWindowByPoint(x, y)</example>
+					<snippet>acGetOwnerWindowByPoint(gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetParentWindowByPoint 通過點查找Parent窗口">
+					<signature>acGetParentWindowByPoint(gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</signature>
+					<parameters>
+						<parameter name="x">窗口的X坐標(左起)</parameter>
+						<parameter name="y">窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>返回目標窗口所屬Parent窗口的句柄</description>
+					<example>acGetParentWindowByPoint(x, y)</example>
+					<snippet>acGetParentWindowByPoint(gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetWindowByPoint 通過點查找窗口">
+					<signature>acGetWindowByPoint(x, y)</signature>
+					<parameters>
+						<parameter name="x">窗口的X坐標(左起)</parameter>
+						<parameter name="y">窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>返回指定坐標窗口的句柄</description>
+					<example>acGetWindowByPoint(x, y)</example>
+					<snippet>acGetWindowByPoint(gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetForegroundWindow 查找前台窗口">
+					<signature>acGetForegroundWindow()</signature>
+					<parameters/>
+					<return type="number"></return>
+					<description>返回當前活動的前台窗口的句柄</description>
+					<example>acGetForegroundWindow()</example>
+					<snippet>acGetForegroundWindow()</snippet>
+				</action>
+				<action name="acGetDesktopWindow 查找桌面">
+					<signature>acGetDesktopWindow()</signature>
+					<parameters/>
+					<return type="number"></return>
+					<description>返回桌面的句柄</description>
+					<example>acGetDesktopWindow()</example>
+					<snippet>acGetDesktopWindow()</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 3.窗口狀態操作 ----">
+			<actions>
+				<action name="acActivateWindow 激活窗口">
+					<signature>acActivateWindow(hwndTarget, x, y, method)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被激活窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">被激活窗口的X坐標(左起)</parameter>
+						<parameter name="y">被激活窗口的Y坐標(上起)</parameter>
+						<parameter name="method">激活窗口的方法：0為標準，1為thread input，2為temporary ALT keypress。
+先使用0(默認值)，只有0沒用時再嘗試其他。</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>激活指定坐標的窗口</description>
+					<example>acActivateWindow(hwndTarget, x, y, method)</example>
+					<snippet>acActivateWindow(nil, gsx, gsy, 0) --sample uses the gesture start coordinates (gsx and gsy) and the standard method for activating a window</snippet>
+				</action>
+				<action name="acPauseResumeThreadList 暫停或恢復線程">
+					<signature>acPauseResumeThreadList(hwndTarget, x, y, resume)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左起)</parameter>
+						<parameter name="y">窗口的Y坐標(上起)</parameter>
+						<parameter name="resume">(0為假，1為真)真為恢復線程，假為暫停線程</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>暫停或恢復指定窗口的所有線程。這是非常危險和不推薦的，事實上本人或微軟都不推薦這麼做。</description>
+					<example>acPauseResumeThreadList(hwndTarget, x, y, resume)</example>
+					<snippet>acPauseResumeThreadList(nil, gsx, gsy, 0) --sample uses the gesture start coordinates (gsx and gsy) and defaults to pause (not resume)</snippet>
+				</action>
+				<action name="acSetProcessPriority 設置進程優先級">
+					<signature>acSetProcessPriority(hwndTarget, x, y, priority)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左起)</parameter>
+						<parameter name="y">窗口的Y坐標(上起)</parameter>
+						<parameter name="priority">(整數)新優先級的值(根據微軟網站上的dwPriorityClass值)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>設置指定窗口的進程優先級</description>
+					<example>acSetProcessPriority(hwndTarget, x, y, priority)</example>
+					<snippet>acSetProcessPriority(nil, gsx, gsy, 0x00000020) --sample uses the gesture start coordinates (gsx and gsy) and sets process to normal priority</snippet>
+				</action>
+				<action name="acTerminateProcess 結束進程">
+					<signature>acTerminateProcess(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左起)</parameter>
+						<parameter name="y">窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>結束指定窗口的主要進程。這不會提醒你保存文件。</description>
+					<example>acTerminateProcess(hwndTarget, x, y)</example>
+					<snippet>acTerminateProcess(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acCloseApplication 關閉程序">
+					<signature>acCloseApplication(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被關閉窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">被關閉窗口的X坐標(左起)</parameter>
+						<parameter name="y">被關閉窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>關閉指定坐標的窗口</description>
+					<example>acCloseApplication(hwndTarget, x, y)</example>
+					<snippet>acCloseApplication(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 4.窗口放置操作 ----">
+			<actions>
+				<action name="acMoveWindow 移動窗口">
+					<signature>acMoveWindow(hwndTarget, x, y, left, top)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被移動窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">被移動窗口的X坐標(左側)</parameter>
+						<parameter name="y">被移動窗口的Y坐標(頂部)</parameter>
+						<parameter name="left">窗口位置的新X坐標(左側)</parameter>
+						<parameter name="top">窗口位置的新Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>移動指定坐標的窗口</description>
+					<example>acMoveWindow(hwndTarget, x, y, left, top)</example>
+					<snippet>acMoveWindow(nil, gsx, gsy, 10, 10) --sample uses the gesture start coordinates (gsx and gsy) and moves the window to position 10, 10</snippet>
+				</action>
+				<action name="acMinimizeWindow 最小化窗口">
+					<signature>acMinimizeWindow(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被最小化窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">被最小化窗口的X坐標(左起)</parameter>
+						<parameter name="y">被最小化窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>最小化指定坐標的窗口</description>
+					<example>acMinimizeWindow(hwndTarget, x, y)</example>
+					<snippet>acMinimizeWindow(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acRestoreWindow 還原窗口">
+					<signature>acRestoreWindow(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左起)</parameter>
+						<parameter name="y">窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>還原指定坐標的窗口</description>
+					<example>acRestoreWindow(hwndTarget, x, y)</example>
+					<snippet>acRestoreWindow(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acMaximizeWindow 最大化窗口">
+					<signature>acMaximizeWindow(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被最大化窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">被最大化窗口的X坐標(左起)</parameter>
+						<parameter name="y">被最大化窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>最大化指定坐標的窗口</description>
+					<example>acMaximizeWindow(hwndTarget, x, y)</example>
+					<snippet>acMaximizeWindow(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acMaximizeOrRestoreWindow 最大化/還原窗口">
+					<signature>acMaximizeOrRestoreWindow(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被最大化/還原窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">被最大化/還原窗口的X坐標(左起)</parameter>
+						<parameter name="y">被最大化/還原窗口的Y坐標(上起)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>根據狀態最大化/還原指定坐標的窗口</description>
+					<example>acMaximizeOrRestoreWindow(hwndTarget, x, y)</example>
+					<snippet>acMaximizeOrRestoreWindow(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acTileWindows 平鋪窗口">
+					<signature>acTileWindows(mode, area, method)</signature>
+					<parameters>
+						<parameter name="mode">1縱向平鋪，2橫向平鋪</parameter>
+						<parameter name="area">0在手勢開始屏幕平鋪窗口，1跨越所有虛擬桌面平鋪窗口</parameter>
+						<parameter name="method">0使用StrokesPlus處理平鋪，1使用Window處理平鋪</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>在一個屏幕或所有屏幕中縱向或橫向平鋪所有打開的窗口。需要注意的是，一些非標準創建的窗口可能無法正確定位。我將繼續完善這個操作。</description>
+					<example>acTileWindows(1, 0, 0)</example>
+					<snippet>acTileWindows(2, 0, 0)  --sample defaults to tile horizontally, only on the screen where the gesture started, and tells S+ to handle the tiling (not Windows)</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 5.窗口大小操作 ----">
+			<actions>
+				<action name="acGetWindowBottom 獲取窗口底部坐標">
+					<signature>acGetWindowBottom(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，將使用鼠標x和y坐標獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>獲取指定窗口的CY坐標(底部)</description>
+					<example>acGetWindowBottom(hwndTarget, x, y)</example>
+					<snippet>acGetWindowBottom(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetWindowLeft 獲取窗口左側坐標">
+					<signature>acGetWindowLeft(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，將使用鼠標x和y坐標獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>獲取指定窗口的X坐標(左側)</description>
+					<example>acGetWindowLeft(hwndTarget, x, y)</example>
+					<snippet>acGetWindowLeft(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetWindowRight 獲取窗口右側坐標">
+					<signature>acGetWindowRight(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，將使用鼠標x和y坐標獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>獲取指定窗口的CX坐標(右側)</description>
+					<example>acGetWindowRight(hwndTarget, x, y)</example>
+					<snippet>acGetWindowRight(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetWindowTop 獲取窗口頂部坐標">
+					<signature>acGetWindowTop(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，將使用鼠標x和y坐標獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>獲取指定窗口的Y坐標(頂部)</description>
+					<example>acGetWindowTop(hwndTarget, x, y)</example>
+					<snippet>acGetWindowTop(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acSetWindowSize 設置窗口大小">
+					<signature>acSetWindowSize(hwndTarget, x, y, width, height)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被移動和調整大小的窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">被移動和調整大小的窗口的X坐標(左側)</parameter>
+						<parameter name="y">被移動和調整大小的窗口的Y坐標(頂部)</parameter>
+						<parameter name="width">窗口的新寬度</parameter>
+						<parameter name="height">窗口的新高度</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>移動和調整指定坐標窗口的寬度和高度</description>
+					<example>acSetWindowSize(hwndTarget, x, y, width, height)</example>
+					<snippet>acSetWindowSize(nil, gsx, gsy, 500, 500) --sample uses the gesture start coordinates (gsx and gsy) and sizes the window to 500 by 500</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 6.窗口順序操作 ----">
+			<actions>
+				<action name="acSetTopmost 置頂">
+					<signature>acSetTopmost(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>設置窗口置頂標記為開</description>
+					<example>acSetTopmost(hwndTarget, x, y)</example>
+					<snippet>acSetTopmost(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acClearTopmost 清除置頂">
+					<signature>acClearTopmost(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>清除窗口置頂標記</description>
+					<example>acClearTopmost(hwndTarget, x, y)</example>
+					<snippet>acClearTopmost(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acToggleTopmost 切換置頂">
+					<signature>acToggleTopmost(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>切換窗口置頂標記為開或關</description>
+					<example>acToggleTopmost(hwndTarget, x, y)</example>
+					<snippet>acToggleTopmost(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acSendWindowToBottom 置底">
+					<signature>acSendWindowToBottom(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>將指定的窗口置底</description>
+					<example>acSendWindowToBottom(hwndTarget, x, y)</example>
+					<snippet>acSendWindowToBottom(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acPreviousApplication 上一個程序">
+					<signature>acPreviousApplication()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>如按一次ALT+TAB一樣切換到上一個窗口</description>
+					<example>acPreviousApplication()</example>
+					<snippet>acPreviousApplication()</snippet>
+				</action>
+				<action name="acNextApplication 下一個程序">
+					<signature>acNextApplication()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>切換到窗口列表中的下一個程序，如按住ALT，然後按TAB(在打開的程序間循環)</description>
+					<example>acNextApplication()</example>
+					<snippet>acNextApplication()</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 7.透明度和顏色操作 ----">
+			<actions>
+				<action name="acGetWindowTransparency 獲取透明度">
+					<signature>acGetWindowTransparency(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">0-255</return>
+					<description>獲取窗口的透明度，0為透明，255為不透明</description>
+					<example>acGetWindowTransparency(hwndTarget, x, y)</example>
+					<snippet>acGetWindowTransparency(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetWindowColorKeyR 獲取紅色值">
+					<signature>acGetWindowColorKeyR(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">0-255</return>
+					<description>獲取窗口的顏色的紅色值</description>
+					<example>acGetWindowColorKeyR(hwndTarget, x, y)</example>
+					<snippet>acGetWindowColorKeyR(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetWindowColorKeyG 獲取綠色值">
+					<signature>acGetWindowColorKeyG(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">0-255</return>
+					<description>獲取窗口的顏色的綠色值</description>
+					<example>acGetWindowColorKeyG(hwndTarget, x, y)</example>
+					<snippet>acGetWindowColorKeyG(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetWindowColorKeyB 獲取藍色值">
+					<signature>acGetWindowColorKeyB(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">0-255</return>
+					<description>獲取窗口的顏色的藍色值</description>
+					<example>acGetWindowColorKeyB(hwndTarget, x, y)</example>
+					<snippet>acGetWindowColorKeyB(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acSetWindowColorKey 設置顏色">
+					<signature>acSetWindowColorKey(hwndTarget, x, y, remove, red, green, blue)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+						<parameter name="remove">(0為假，1為真)，真為移除設置的顏色</parameter>
+						<parameter name="red">合成顏色的紅色值</parameter>
+						<parameter name="green">合成顏色的綠色值</parameter>
+						<parameter name="blue">合成顏色的藍色值</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>設置窗口的顏色，使整個窗口匹配(R,G,B)合成的顏色。
+根據窗口會有奇怪的效果！</description>
+					<example>acSetWindowColorKey(hwndTarget, x, y, remove, red, green, blue)</example>
+					<snippet>acSetWindowColorKey(nil, gsx, gsy, 0, 255, 255, 255) --sample uses the gesture start coordinates (gsx and gsy) and sets the color key to white (255,255,255)</snippet>
+				</action>
+				<action name="acSetWindowTransparency 設置透明度">
+					<signature>acSetWindowTransparency(hwndTarget, x, y, opacity)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+						<parameter name="opacity">設置透明度的值，0-255(255為不透明)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>設置窗口的透明度，0為透明，255為不透明</description>
+					<example>acSetWindowTransparency(hwndTarget, x, y, opacity)</example>
+					<snippet>acSetWindowTransparency(nil, gsx, gsy, 128) --sample uses the gesture start coordinates (gsx and gsy) and sets the opacity to 50 percent</snippet>
+				</action>
+				<action name="acSetWindowTransparencyAndColorKey 設置透明度和顏色">
+					<signature>acSetWindowTransparencyAndColorKey(hwndTarget, x, y, opacity, red, green, blue)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄; nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+						<parameter name="opacity">設置透明度的值，0-255(255為不透明)</parameter>
+						<parameter name="red">合成顏色的紅色值</parameter>
+						<parameter name="green">合成顏色的綠色值</parameter>
+						<parameter name="blue">合成顏色的藍色值</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>設置窗口的透明度和顏色</description>
+					<example>acSetWindowTransparencyAndColorKey(hwndTarget, x, y, opacity, red, green, blue)</example>
+					<snippet>acSetWindowTransparencyAndColorKey(nil, gsx, gsy, 128, 255, 255, 255) --sample uses the gesture start coordinates (gsx and gsy), sets the opacity to 50 percent, and sets the color key to white (255,255,255)</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 8.其它窗口操作 ----">
+			<actions>
+				<action name="acGetWindowTitle 獲取窗口標題">
+					<signature>acGetWindowTitle(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">窗口的X坐標(左側)</parameter>
+						<parameter name="y">窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="string">窗口標題</return>
+					<description>返回指定窗口的標題</description>
+					<example>acGetWindowTitle(hwndTarget, x, y)</example>
+					<snippet>acGetWindowTitle(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetClassName 獲取類名">
+					<signature>acGetClassName(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄/控件的句柄；nil將使用x和y定位窗口/句柄</parameter>
+						<parameter name="x">被定位窗口/控件的X坐標(左側)</parameter>
+						<parameter name="y">被定位窗口/控件的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="string"></return>
+					<description>獲取指定的窗口或控件的類名。
+請注意，不像其他操作X和Y返回的是OWNING窗口，這個操作是返回指定點的，因此如果該點是一個按鈕，該按鈕的類名將被退回。
+如果你想使用容器層次結構，你可以調用acGetOwnerWindowByPoint() 或acGetParentWindowByPoint()。</description>
+					<example>acGetClassName(hwndTarget, x, y)</example>
+					<snippet>acGetClassName(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetControlID 獲取控件ID">
+					<signature>acGetControlID(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄/控件的句柄；nil將使用x和y定位窗口/句柄</parameter>
+						<parameter name="x">被定位窗口/控件的X坐標(左側)</parameter>
+						<parameter name="y">被定位窗口/控件的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="string"></return>
+					<description>獲取控件句柄為控件ID。</description>
+					<example>acGetControlID(hwndTarget, x, y)</example>
+					<snippet>acGetControlID(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetExecutableName 獲取EXE文件名">
+					<signature>acGetExecutableName(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口的句柄；nil將使用x和y定位窗口</parameter>
+						<parameter name="x">被定位窗口的X坐標(左側)</parameter>
+						<parameter name="y">被定位窗口的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="string"></return>
+					<description>獲取指定窗口的EXE文件名</description>
+					<example>acGetExecutableName(hwndTarget, x, y)</example>
+					<snippet>acGetExecutableName(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetExecutablePath 獲取EXE文件路徑">
+				<signature>acGetExecutablePath(hwndTarget, x, y, includeEXEName, useDriveLetters)</signature>
+				<parameters>
+				<parameter name="hwndTarget">窗口的句柄；nil將使用x和y定位窗口</parameter>
+				<parameter name="x">被定位窗口的X坐標(左側)</parameter>
+				<parameter name="y">被定位窗口的Y坐標(頂部)</parameter>
+				<parameter name="includeEXEName">(0 為假, 1 為真) 包含EXE文件名 (可執行文件的完整路徑)</parameter>
+				<parameter name="useDriveLetters">(0 為假, 1 為真) 使用驅動標籤letters代替驅動名稱返回路徑。僅支持邏輯驅動，否則將使用驅動名稱。</parameter>
+				</parameters>
+				<return type="string"></return>
+				<description>獲取所選窗口EXE文件的完整路徑</description>
+				<example>acGetExecutablePath(hwndTarget, x, y, includeEXEName, useDriveLetters)</example>
+				<snippet>acGetExecutablePath(nil, gsx, gsy, 0, 1) --sample uses the gesture start coordinates (gsx and gsy), only returns path (using drive letter, if available)</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 9.多顯示器操作 ----">
+			<actions>
+				<action name="acCenterWindowToScreen 窗口居中">
+					<signature>acCenterWindowToScreen(hwndTarget, x, y, useworkarea)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，在x和y坐標處獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+						<parameter name="useworkarea">(0為假，1為真)是否使用屏幕的工作區(工作區不包括任務欄)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>將窗口置於屏幕中間</description>
+					<example>acCenterWindowToScreen(hwndTarget, x, y, useworkarea)</example>
+					<snippet>acCenterWindowToScreen(nil, gsx, gsy, 1) --sample uses the gesture start coordinates (gsx and gsy) and centers based on the work area</snippet>
+				</action>
+				<action name="acClipWindowToScreen 調整窗口位置">
+					<signature>acClipWindowToScreen(hwndTarget, x, y, useworkarea)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，在x和y坐標處獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+						<parameter name="useworkarea">(0為假，1為真)是否使用屏幕的工作區(工作區不包括任務欄)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>重新調整屏幕上的窗口位置，確保窗口不會超出屏幕邊界，但不調整窗口大小</description>
+					<example>acClipWindowToScreen(hwndTarget, x, y, useworkarea)</example>
+					<snippet>acClipWindowToScreen(nil, gsx, gsy, 1) --sample uses the gesture start coordinates (gsx and gsy) and repositions based on the work area</snippet>
+				</action>
+				<action name="acFitWindowToScreen 窗口適應屏幕">
+					<signature>acFitWindowToScreen(hwndTarget, x, y, useworkarea)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，在x和y坐標處獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+						<parameter name="useworkarea">(0為假，1為真)是否使用屏幕的工作區(工作區不包括任務欄)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>使窗口適應屏幕，這通常會使窗口佔據整個屏幕。</description>
+					<example>acFitWindowToScreen(hwndTarget, x, y, useworkarea)</example>
+					<snippet>acFitWindowToScreen(nil, gsx, gsy, 1) --sample uses the gesture start coordinates (gsx and gsy) and resizes based on the work area</snippet>
+				</action>
+				<action name="acMaximizeToAllScreens 跨顯示器最大化">
+					<signature>acMaximizeToAllScreens(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，在x和y坐標處獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>拉伸窗口使其跨越所有顯示器最大化。一般來說，這不是很實用的，但還是有其價值。</description>
+					<example>acMaximizeToAllScreens(hwndTarget, x, y)</example>
+					<snippet>acMaximizeToAllScreens(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetMonitorBrightness 獲取屏幕亮度">
+					<signature>acGetMonitorBrightness(monitorhandle, x, y, mode)</signature>
+					<parameters>
+						<parameter name="monitorhandle">屏幕句柄</parameter>
+						<parameter name="x">定位屏幕的X坐標</parameter>
+						<parameter name="y">定位屏幕的Y坐標</parameter>
+						<parameter name="mode">1=當前值，2=最小支持值，3=最大支持值</parameter>
+					</parameters>
+					<return type="number">1為成功，-1為失敗</return>
+					<description>返回與屏幕句柄相關聯的第一塊物理屏幕的亮度值（基於模態參數）。（詳見變更日誌）</description>
+					<example>acGetMonitorBrightness(monitorhandle, x, y, mode)</example>
+					<snippet>acGetMonitorBrightness(nil, gsx, gsy, 1) --sample gets the current brightness value of the monitor from the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acSetMonitorBrightness 設置屏幕亮度">
+					<signature>acSetMonitorBrightness(monitorhandle, x, y, value)</signature>
+					<parameters>
+						<parameter name="monitorhandle">屏幕句柄</parameter>
+						<parameter name="x">定位屏幕的X坐標</parameter>
+						<parameter name="y">定位屏幕的Y坐標</parameter>
+						<parameter name="value">要設置的新亮度值</parameter>
+					</parameters>
+					<return type="number">1為成功，-1為失敗</return>
+					<description>設置與屏幕句柄相關聯的第一塊物理屏幕的亮度值。（詳見變更日誌）</description>
+					<example>acSetMonitorBrightness(monitorhandle, x, y, value)</example>
+					<snippet>acSetMonitorBrightness(nil, gsx, gsy, 50) --sample sets the current brightness value to 50% for the monitor from the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetMonitorFromPoint 通過點獲取顯示器句柄">
+					<signature>acGetMonitorFromPoint(x, y)</signature>
+					<parameters>
+						<parameter name="x">用於定位顯示器的點的x坐標</parameter>
+						<parameter name="y">用於定位顯示器的點的y坐標</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>返回x，y所在顯示器的句柄</description>
+					<example>acGetMonitorFromPoint(x, y)</example>
+					<snippet>acGetMonitorFromPoint(gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetMonitorFromName 通過名稱獲取顯示器句柄">
+					<signature>acGetMonitorFromName(monitorname)</signature>
+					<parameters>
+						<parameter name="monitorname">顯示器的名稱(該值必須轉換形式，「\\」代表「\」，如「\\.\DISPLAY1」在Lua腳本將寫成「\\\\.\\DISPLAY1」)</parameter>
+					</parameters>
+					<return type="number">顯示器句柄</return>
+					<description>獲取指定顯示器的句柄</description>
+					<example>acGetMonitorFromName(monitorname)</example>
+					<snippet>acGetMonitorFromName("monitor-name") --"monitor-name" will need to be changed to match the actual monitor name, use acGetMonitorName to retrieve a monitor's name</snippet>
+				</action>
+				<action name="acGetMonitorName 獲取顯示器名稱">
+					<signature>acGetMonitorName(monitorhandle)</signature>
+					<parameters>
+						<parameter name="monitorhandle">顯示器的句柄</parameter>
+					</parameters>
+					<return type="string"></return>
+					<description>返回顯示器的名稱</description>
+					<example>acGetMonitorName(monitorhandle)</example>
+					<snippet>acGetMonitorName(123456) --123456 will need to be changed to match the actual monitor handle; use acGetMonitorFromName to retrieve a handle</snippet>
+				</action>
+				<action name="acGetMonitorRight 獲取顯示器右側坐標">
+					<signature>acGetMonitorRight(monitorhandle, useworkarea)</signature>
+					<parameters>
+						<parameter name="monitorhandle">顯示器的句柄</parameter>
+						<parameter name="useworkarea">是否只考慮工作區而非整個顯示器(不包括任務欄)</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>獲取指定顯示器的CX坐標(右側)</description>
+					<example>acGetMonitorRight(monitorhandle, useworkarea)</example>
+					<snippet>acGetMonitorRight(123456, 1) --123456 will need to be changed to match the actual monitor handle; use acGetMonitorFromName to retrieve a handle. this snippet specifies to use work area</snippet>
+				</action>
+				<action name="acGetMonitorTop 獲取顯示器頂部坐標">
+					<signature>acGetMonitorTop(monitorhandle, useworkarea)</signature>
+					<parameters>
+						<parameter name="monitorhandle">顯示器的句柄</parameter>
+						<parameter name="useworkarea">是否只考慮工作區而非整個顯示器(不包括任務欄)</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>獲取指定顯示器的Y坐標(頂部)</description>
+					<example>acGetMonitorTop(monitorhandle, useworkarea)</example>
+					<snippet>acGetMonitorTop(123456, 1) --123456 will need to be changed to match the actual monitor handle; use acGetMonitorFromName to retrieve a handle. this snippet specifies to use work area</snippet>
+				</action>
+				<action name="acGetMonitorLeft 獲取顯示器左側坐標">
+					<signature>acGetMonitorLeft(monitorhandle, useworkarea)</signature>
+					<parameters>
+						<parameter name="monitorhandle">顯示器的句柄</parameter>
+						<parameter name="useworkarea">是否只考慮工作區而非整個顯示器(不包括任務欄)</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>獲取指定顯示器的X坐標(左側)</description>
+					<example>acGetMonitorLeft(monitorhandle, useworkarea)</example>
+					<snippet>acGetMonitorLeft(123456, 1) --123456 will need to be changed to match the actual monitor handle; use acGetMonitorFromName to retrieve a handle. this snippet specifies to use work area</snippet>
+				</action>
+				<action name="acGetMonitorBottom 獲取顯示器底部坐標">
+					<signature>acGetMonitorBottom(monitorhandle, useworkarea)</signature>
+					<parameters>
+						<parameter name="monitorhandle">顯示器的句柄</parameter>
+						<parameter name="useworkarea">是否只考慮工作區而非整個顯示器(不包括任務欄)</parameter>
+					</parameters>
+					<return type="number"></return>
+					<description>獲取指定顯示器的CY坐標(底部)</description>
+					<example>acGetMonitorBottom(monitorhandle, useworkarea)</example>
+					<snippet>acGetMonitorBottom(123456, 1) --123456 will need to be changed to match the actual monitor handle; use acGetMonitorFromName to retrieve a handle. this snippet specifies to use work area</snippet>
+				</action>
+				<action name="acSendWindowToMonitorByHandle 通過顯示器句柄發送窗口">
+				<signature>acSendWindowToMonitorByHandle(hwndTarget, x, y, monitorhandle)</signature>
+				<parameters>
+				<parameter name="hwndTarget">目標窗口句柄 (如果為空, 將使用X和Y坐標定位窗口)</parameter>
+				<parameter name="x">如無指定目標, 這將是獲取窗口句柄的X和Y坐標</parameter>
+				<parameter name="y">同上</parameter>				
+				<parameter name="monitorhandle">目標顯示器句柄</parameter>
+				</parameters>
+				<return type="number">總是1</return>
+				<description>發送窗口到指定的顯示器(位置基於左側和頂部，不調整大小)</description>
+				<example>acSendWindowToMonitorByHandle(hwndTarget, x, y, monitorhandle)</example>
+				<snippet>acSendWindowToMonitorByHandle(nil, gsx, gsy, 123456) --123456 will need to be changed to match the actual monitor handle; use acGetMonitorFromName to retrieve a handle</snippet>
+				</action>
+				<action name="acSendWindowToMonitorByName 通過顯示器名稱發送窗口">
+				<signature>acSendWindowToMonitorByName(hwndTarget, x, y, monitorname)</signature>
+				<parameters>
+				<parameter name="hwndTarget">目標窗口句柄 (如果為空, 將使用X和Y坐標定位窗口)</parameter>
+				<parameter name="x">如無指定目標, 這將是獲取窗口句柄的X和Y坐標</parameter>
+				<parameter name="y">同上</parameter>					
+				<parameter name="monitorname">目標顯示器名稱 (並需轉換字符! \\ 轉 \, 例子 "\\.\DISPLAY1" 需寫成 "\\\\.\\DISPLAY1")</parameter>
+				</parameters>
+				<return type="number">總是1</return>
+				<description>發送窗口到指定的顯示器(位置基於左側和頂部，不調整大小)</description>
+				<example>acSendWindowToMonitorByName(monitorname)</example>
+				<snippet>acSendWindowToMonitorByName(nil, gsx, gsy, "monitor-name") --"monitor-name" will need to be changed to match the actual monitor name, use acGetMonitorName to retrieve a monitor's name</snippet>
+				</action>
+				<action name="acSendWindowToNextMonitor 發送窗口到下一個顯示器">
+					<signature>acSendWindowToNextMonitor(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，在x和y坐標處獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>發送窗口到下一個顯示器(位置基於左側和頂部，不調整大小)</description>
+					<example>acSendWindowToNextMonitor(hwndTarget, x, y)</example>
+					<snippet>acSendWindowToNextMonitor(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acSendWindowToPreviousMonitor 發送窗口到上一個顯示器">
+					<signature>acSendWindowToPreviousMonitor(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被請求的窗口句柄(如果為nil，將用x和y坐標來獲取窗口)</parameter>
+						<parameter name="x">如果沒有指定目標句柄，在x和y坐標處獲得窗口句柄</parameter>
+						<parameter name="y">同上</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>發送窗口到上一個顯示器(位置基於左側和頂部，不調整大小)</description>
+					<example>acSendWindowToPreviousMonitor(hwndTarget, x, y)</example>
+					<snippet>acSendWindowToPreviousMonitor(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 10.鍵盤操作 ----">
+			<actions>
+				<action name="acSendKeys 發送按鍵">
+					<signature>acSendKeys(keystring)</signature>
+					<parameters>
+						<parameter name="keystring">發送按鍵命令的字符串(包括在「幫助」頁面)
+^ = Ctrl
+% = Alt
++ = Shift
+@ = Win
+~ = Enter</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>向活動窗口發送按鍵。</description>
+					<example>acSendKeys(keystring)</example>
+					<snippet>acSendKeys("your text here")</snippet>
+				</action>
+				<action name="acSendKeyDown 按下某鍵">
+					<signature>acSendKeyDown(VKey)</signature>
+					<parameters>
+						<parameter name="VKey">要發送的虛擬鍵值</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>向活動窗口發送按下某鍵事件。</description>
+					<example>acSendKeyDown(VKey)</example>
+					<snippet>acSendKeyDown(65) --sends the key down event for the letter "a"</snippet>
+				</action>
+				<action name="acSendKeyUp 彈起某鍵">
+					<signature>acSendKeyUp(VKey)</signature>
+					<parameters>
+						<parameter name="VKey">要發送的虛擬鍵值</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>向活動窗口發送彈起某鍵事件。</description>
+					<example>acSendKeyUp(VKey)</example>
+					<snippet>acSendKeyUp(65) --sends the key up event for the letter "a"</snippet>
+				</action>
+				<action name="acSendControlDown 按住Ctrl鍵">
+					<signature>acSendControlDown()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>發送按住Ctrl鍵事件</description>
+					<example>acSendControlDown()</example>
+					<snippet>acSendControlDown()</snippet>
+				</action>
+				<action name="acSendControlUp 彈起Ctrl鍵">
+					<signature>acSendControlUp()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>發送彈起Ctrl鍵事件</description>
+					<example>acSendControlUp()</example>
+					<snippet>acSendControlUp()</snippet>
+				</action>
+				<action name="acSendAltDown 按住Alt鍵">
+					<signature>acSendAltDown()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>發送按住Alt鍵事件</description>
+					<example>acSendAltDown()</example>
+					<snippet>acSendAltDown()</snippet>
+				</action>
+				<action name="acSendAltUp 彈起Alt鍵">
+					<signature>acSendAltUp()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>發送彈起Alt鍵事件</description>
+					<example>acSendAltUp()</example>
+					<snippet>acSendAltUp()</snippet>
+				</action>
+				<action name="acSendShiftDown 按住Shift鍵">
+					<signature>acSendShiftDown()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>發送按住Shift鍵事件</description>
+					<example>acSendShiftDown()</example>
+					<snippet>acSendShiftDown()</snippet>
+				</action>
+				<action name="acSendShiftUp 彈起Shift鍵">
+					<signature>acSendShiftUp()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>發送彈起Shift鍵事件</description>
+					<example>acSendShiftUp()</example>
+					<snippet>acSendShiftUp()</snippet>
+				</action>
+				<action name="acSendWinDown 按住Win鍵">
+					<signature>acSendWinDown()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>發送按住Win鍵事件</description>
+					<example>acSendWinDown()</example>
+					<snippet>acSendWinDown()</snippet>
+				</action>
+				<action name="acSendWinUp 彈起Win鍵">
+					<signature>acSendWinUp()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>發送彈起Win鍵事件</description>
+					<example>acSendWinUp()</example>
+					<snippet>acSendWinUp()</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 11.鼠標操作 ----">
+			<actions>
+				<action name="acGetMouseLocationX 獲取鼠標X坐標">
+					<signature>acGetMouseLocationX()</signature>
+					<parameters/>
+					<return type="number"></return>
+					<description>返回當前鼠標位置的X坐標(左側)</description>
+					<example>acGetMouseLocationX()</example>
+					<snippet>acGetMouseLocationX()</snippet>
+				</action>
+				<action name="acGetMouseLocationY 獲取鼠標Y坐標">
+					<signature>acGetMouseLocationY()</signature>
+					<parameters/>
+					<return type="number"></return>
+					<description>返回當前鼠標位置的Y坐標(頂部)</description>
+					<example>acGetMouseLocationY()</example>
+					<snippet>acGetMouseLocationY()</snippet>
+				</action>
+				<action name="acMouseClick 點擊鼠標">
+					<signature>acMouseClick(x, y, button, down, up)</signature>
+					<parameters>
+						<parameter name="x">要點擊位置的X坐標(左側)</parameter>
+						<parameter name="y">要點擊位置的Y坐標(頂部)</parameter>
+						<parameter name="button">要發送的鼠標鍵
+	0：輔助鍵(默認為右鍵，除非鼠標按鈕被交換)
+	1：中鍵
+	2：主鍵(默認為左鍵，除非鼠標按鈕被交換)
+	3：X1鍵
+	4：X2鍵</parameter>
+						<parameter name="down">(0為假，1為真)真側發送【按住鼠標鍵】</parameter>
+						<parameter name="up">(0為假，1為真)真側發送【彈起鼠標鍵】</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>在指定坐標發送鼠標按住和/或彈起事件</description>
+					<example>acMouseClick(x, y, button, down, up)</example>
+					<snippet>acMouseClick(100, 100, 0, 1, 1) --this sample clicks the right mouse button at 100,100; sending down and up button events</snippet>
+				</action>
+				<action name="acMouseMove 移動鼠標">
+					<signature>acMouseMove(x, y)</signature>
+					<parameters>
+						<parameter name="x">要移動到的X坐標(左側)</parameter>
+						<parameter name="y">要移動到的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>將鼠標指針移動到指定坐標</description>
+					<example>acMouseMove(x, y)</example>
+					<snippet>acMouseMove(100, 100) --this sample moves the mouse to coordinates 100,100</snippet>
+				</action>
+				<action name="acGetMouseCursorType 獲取鼠標指針類型">
+					<signature>acGetMouseCursorType()</signature>
+					<parameters/>
+					<return type="string">指針類型的名稱：ARROW, IBEAM, WAIT, CROSS, UP, SIZENWSE, SIZENESW, SIZEWE, SIZENS, SIZEALL, NO, HAND, APPSTARTING, HELP, or Unknown</return>
+					<description>返回當前鼠標指針的名稱，或Unknown</description>
+					<example>acGetMouseCursorType()</example>
+					<snippet>acGetMouseCursorType()</snippet>
+				</action>
+				<action name="acAutoHideMouseCursor 自動隱藏鼠標指針">
+					<signature>acAutoHideMouseCursor(hidetimer,rehidetimer)</signature>
+					<parameters>
+						<parameter name="hidetimer">(毫秒)鼠標不動多長時間隱藏鼠標指針，用0禁用自動隱藏。</parameter>
+						<parameter name="rehidetimer">(毫秒)多長時間重新隱藏鼠標指針(以防其他程序顯示指針)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>在指定時間後自動隱藏所有標準鼠標指針</description>
+					<example>acAutoHideMouseCursor(2000,2000)</example>
+					<snippet>acAutoHideMouseCursor(2000,2000) --this tells S+ to hide the mouse after 2 seconds of not moving, and to re-hide every 2 seconds (in case another applications re-displays the cursor)</snippet>
+				</action>
+				<action name="acHideMouseCursor 隱藏鼠標指針">
+					<signature>acHideMouseCursor()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>隱藏所有標準的鼠標指針</description>
+					<example>acHideMouseCursor()</example>
+					<snippet>acHideMouseCursor()</snippet>
+				</action>
+				<action name="acShowMouseCursor 顯示鼠標指針">
+					<signature>acShowMouseCursor()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>顯示所有標準的鼠標指針</description>
+					<example>acShowMouseCursor()</example>
+					<snippet>acShowMouseCursor()</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 12.剪貼板操作 ----">
+			<actions>
+				<action name="acGetClipboardText 獲取剪貼板內容">
+					<signature>acGetClipboardText()</signature>
+					<parameters/>
+					<return type="string"></return>
+					<description>返回當前剪貼板的內容</description>
+					<example>acGetClipboardText()</example>
+					<snippet>acGetClipboardText()</snippet>
+				</action>
+				<action name="acSetClipboardText 設置剪貼板內容">
+					<signature>acSetClipboardText(value)</signature>
+					<parameters>
+						<parameter name="value">保存到剪貼板的內容</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>設置剪貼板的內容為「value」</description>
+					<example>acSetClipboardText(value)</example>
+					<snippet>acSetClipboardText("value") --Sets the current clipboard text to "value"</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 13.音頻操作 ----">
+			<actions>
+				<action name="acGetVolume 獲取音量">
+					<signature>acGetVolume()</signature>
+					<parameters/>
+					<return type="number">當前的音量,0-100</return>
+					<description>返回主聲道的當前音量</description>
+					<example>acGetVolume()</example>
+					<snippet>acGetVolume()</snippet>
+				</action>
+				<action name="acSetVolume 設置音量">
+					<signature>acSetVolume(value, increment)</signature>
+					<parameters>
+						<parameter name="value">(整數0-100)要設置的音量</parameter>
+						<parameter name="increment">(0為假，1為真) - 真:value加到現在的音量，假:音量設為value</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>設置主聲道音量</description>
+					<example>acSetVolume(value, increment)</example>
+					<snippet>acSetVolume(50, 0) --sets the volume to 50 percent, doesn't increment</snippet>
+				</action>
+				<action name="acGetMute 獲取靜音狀態">
+					<signature>acGetMute()</signature>
+					<parameters/>
+					<return type="number">1為靜音，0為沒有靜音</return>
+					<description>返回主聲道的靜音狀態</description>
+					<example>acGetMute()</example>
+					<snippet>acGetMute()</snippet>
+				</action>
+				<action name="acSetMute 設置靜音狀態">
+					<signature>acSetMute(value)</signature>
+					<parameters>
+						<parameter name="value">1靜音，0解除靜音</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>根據傳入的value設置靜音狀態</description>
+					<example>acSetMute(value)</example>
+					<snippet>acSetMute(1) --Turns on Mute</snippet>
+				</action>
+				<action name="acToggleMute 切換靜音狀態">
+					<signature>acToggleMute()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>切換主通道的靜音狀態</description>
+					<example>acToggleMute()</example>
+					<snippet>acToggleMute()</snippet>
+				</action>
+				<action name="acPlaySound 播放聲音">
+					<signature>acPlaySound(filename)</signature>
+					<parameters>
+						<parameter name="filename">WAV文件的完整路徑（記住轉為Lua字符串格式）</parameter>
+					</parameters>
+					<return type="number">(always 1)</return>
+					<description>播放聲音</description>
+					<example>acPlaySound(filename)</example>
+					<snippet>acPlaySound("C:\\Windows\\Media\\ding.wav") --only works if that file exists</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 14.Windows註冊表操作 ----">
+			<actions>
+				<action name="acRegistryCreateKey 創建註冊表項">
+					<signature>acRegistryCreateKey(rootkey, path)</signature>
+					<parameters>
+						<parameter name="rootkey">註冊表根鍵：
+	1 = HKEY_CLASSES_ROOT
+	2 = HKEY_LOCAL_MACHINE
+	3 = HKEY_CURRENT_USER
+	4 = HKEY_USERS</parameter>
+						<parameter name="path">要創建的子鍵路徑（\必須寫成\\）</parameter>
+					</parameters>
+					<return type="number">0為失敗，1為成功</return>
+					<description>在指定路徑創建項</description>
+					<example>acRegistryCreateKey(rootkey, path)</example>
+					<snippet>acRegistryCreateKey(2, "Software\\MyApp") --Creates a new key under HKEY_LOCAL_MACHINE named MyApp</snippet>
+				</action>
+				<action name="acRegistryDeleteKey 刪除註冊表項">
+					<signature>acRegistryDeleteKey(rootkey, path)</signature>
+					<parameters>
+						<parameter name="rootkey">註冊表根鍵：
+	1 = HKEY_CLASSES_ROOT
+	2 = HKEY_LOCAL_MACHINE
+	3 = HKEY_CURRENT_USER
+	4 = HKEY_USERS</parameter>
+						<parameter name="path">要刪除的子鍵路徑（\必須寫成\\）</parameter>
+					</parameters>
+					<return type="number">0為失敗，1為成功</return>
+					<description>刪除指定路徑的項。如果子項存在則不能刪除；必須先刪除子項。</description>
+					<example>acRegistryDeleteKey(rootkey, path)</example>
+					<snippet>acRegistryDeleteKey(2, "Software\\MyApp") --Deletes the MyApp key under HKEY_LOCAL_MACHINE</snippet>
+				</action>
+				<action name="acRegistryDeleteValue 刪除註冊表值">
+					<signature>acRegistryDeleteValue(rootkey, path, name)</signature>
+					<parameters>
+						<parameter name="rootkey">註冊表根鍵：
+	1 = HKEY_CLASSES_ROOT
+	2 = HKEY_LOCAL_MACHINE
+	3 = HKEY_CURRENT_USER
+	4 = HKEY_USERS</parameter>
+						<parameter name="path">要刪除的值的所在路徑（\必須寫成\\）</parameter>
+						<parameter name="name">要被刪除的值的名稱</parameter>
+					</parameters>
+					<return type="number">0為失敗，1為成功</return>
+					<description>刪除指定路徑/名稱的值。</description>
+					<example>acRegistryDeleteValue(rootkey, path, name)</example>
+					<snippet>acRegistryDeleteValue(2, "Software\\MyApp","Setting1") --Deletes the Setting1 value in the MyApp key under HKEY_LOCAL_MACHINE</snippet>
+				</action>
+				<action name="acRegistryGetNumber 獲取註冊表數值">
+					<signature>acRegistryGetNumber(rootkey, path, name, default)</signature>
+					<parameters>
+						<parameter name="rootkey">註冊表根鍵：
+	1 = HKEY_CLASSES_ROOT
+	2 = HKEY_LOCAL_MACHINE
+	3 = HKEY_CURRENT_USER
+	4 = HKEY_USERS</parameter>
+						<parameter name="path">要檢索的值的所在路徑（\必須寫成\\）</parameter>
+						<parameter name="name">要檢索的值的名稱</parameter>
+						<parameter name="default">如果沒有找到所返回的默認值</parameter>
+					</parameters>
+					<return type="number">值或沒找到的默認值</return>
+					<description>獲取指定鍵/路徑/名稱的值。</description>
+					<example>acRegistryGetNumber(rootkey, path, name, default)</example>
+					<snippet>acRegistryGetNumber(2,"Software\\MyApp","Setting1",0) --Gets the Setting1 value in the MyApp key under HKEY_LOCAL_MACHINE, or returns 0 if it doesn't exist</snippet>
+				</action>
+				<action name="acRegistryGetString 獲取註冊表字符串">
+					<signature>acRegistryGetString(rootkey, path, name, default)</signature>
+					<parameters>
+						<parameter name="rootkey">註冊表根鍵：
+	1 = HKEY_CLASSES_ROOT
+	2 = HKEY_LOCAL_MACHINE
+	3 = HKEY_CURRENT_USER
+	4 = HKEY_USERS</parameter>
+						<parameter name="path">要檢索的值的所在路徑（\必須寫成\\）</parameter>
+						<parameter name="name">要檢索的值的名稱</parameter>
+						<parameter name="default">如果沒有找到所返回的默認值</parameter>
+					</parameters>
+					<return type="string">值或沒找到的默認值</return>
+					<description>獲取指定鍵/路徑/名稱的值。 值的類型REG_EXPAND_SZ為可擴展的環境變量。</description>
+					<example>acRegistryGetString(rootkey, path, name, default)</example>
+					<snippet>acRegistryGetString(2,"Software\\MyApp","Setting2","Not Found") --Gets the Setting2 value in the MyApp key under HKEY_LOCAL_MACHINE, or returns "Not Found" if it doesn't exist</snippet>
+				</action>
+				<action name="acRegistrySetNumber 設置註冊表數值">
+					<signature>acRegistrySetNumber(rootkey, path, name, value)</signature>
+					<parameters>
+						<parameter name="rootkey">註冊表根鍵：
+	1 = HKEY_CLASSES_ROOT
+	2 = HKEY_LOCAL_MACHINE
+	3 = HKEY_CURRENT_USER
+	4 = HKEY_USERS</parameter>
+						<parameter name="path">要寫入的值的所在路徑（\必須寫成\\）</parameter>
+						<parameter name="name">要寫入的值的名稱</parameter>
+						<parameter name="value">要寫入的值</parameter>
+					</parameters>
+					<return type="integer">0為失敗，1為成功</return>
+					<description>設置指定鍵/路徑/名稱的值。</description>
+					<example>acRegistrySetNumber(rootkey, path, name, value)</example>
+					<snippet>acRegistrySetNumber(2,"Software\\MyApp","Setting1",4) --Sets the Setting1 value to 4 in the MyApp key under HKEY_LOCAL_MACHINE</snippet>
+				</action>
+				<action name="acRegistrySetString 設置註冊表字符串">
+					<signature>acRegistrySetString(rootkey, path, name, value, type)</signature>
+					<parameters>
+						<parameter name="rootkey">註冊表根鍵：
+	1 = HKEY_CLASSES_ROOT
+	2 = HKEY_LOCAL_MACHINE
+	3 = HKEY_CURRENT_USER
+	4 = HKEY_USERS</parameter>
+						<parameter name="path">要吸入的值的所在路徑（\必須寫成\\）</parameter>
+						<parameter name="name">要寫入的值的名稱</parameter>
+						<parameter name="value">要寫入的值</parameter>
+						<parameter name="type">要寫入的值的類型：
+	1 = 字符串值REG_SZ (默認)
+	2 = 可擴充字符串值REG_EXPAND_SZ</parameter>
+					</parameters>
+					<return type="integer">0為失敗，1為成功</return>
+					<description>設置指定鍵/路徑/名稱的值。</description>
+					<example>acRegistrySetString(rootkey, path, name, value, type)</example>
+					<snippet>acRegistrySetString(2,"Software\\MyApp","Setting2","Test Value", 1) --Sets the Setting2 value to "Test Value" (as REG_SZ) in the MyApp key under HKEY_LOCAL_MACHINE</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 15.實用操作 ----">
+			<actions>
+				<action name="acConsumePhysicalInput 接管物理輸入">
+					<signature>acConsumePhysicalInput(value)</signature>
+					<parameters>
+						<parameter name="value">是否接管物理輸入(0為否，1為是)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>讓S+接管所有物理輸入(鼠標和鍵盤)。如果你調用一套鼠標或鍵盤操作而不希望任何物理輸入干擾的話，這是很有用的。
+但要確保你再調用一次，用 0 釋放控制，要不然您的計算機可能無法使用！</description>
+					<example>acConsumePhysicalInput()</example>
+					<snippet>acConsumePhysicalInput(1) --sample instructs S+ to consume ALL input (make sure to call acConsumePhysicalInput(0) within the SAME Lua script or your computer may become unusable!). </snippet>
+				</action>
+				<action name="acDelay 延遲">
+					<signature>acDelay(duration)</signature>
+					<parameters>
+						<parameter name="duration">(毫秒)暫停的毫秒數</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>暫停Lua腳本指定時長(Sleep(n))</description>
+					<example>acDelay(duration)</example>
+					<snippet>acDelay(duration)</snippet>
+				</action>
+				<action name="acDisplayBalloonTip 顯示氣泡提示">
+					<parameters>
+						<parameter name="title">顯示的標題</parameter>
+						<parameter name="message">顯示的信息</parameter>
+						<parameter name="icon">顯示的氣泡圖標:0 = 無, 1 = 信息, 2 = 警告, 3 = 錯誤</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<signature>acDisplayBalloonTip(title, message, icon)</signature>
+					<description>在S+托盤圖標處顯示氣泡提示。注意Windows限制了氣泡提示的顯示頻率，所以如果你想在提示消失後幾秒再調用這個操作，什麼都不會發生。 WinXP與Win7似乎有點不同。</description>
+					<example>acDisplayBalloonTip("Testing", "Hello!", 1)</example>
+					<snippet>acDisplayBalloonTip("Testing", "Hello!", 1) --displays a simple balloon tip with an info icon</snippet>
+				</action>
+				<action name="acDisplayText 顯示文本">
+					<parameters>
+						<parameter name="message">顯示的文本</parameter>
+						<parameter name="font">使用的字體</parameter>
+						<parameter name="size">文本大小</parameter>
+						<parameter name="red">文本顏色的紅色值</parameter>
+						<parameter name="green">文本顏色的綠色值</parameter>
+						<parameter name="blue">文本顏色的藍色值</parameter>
+						<parameter name="duration">(毫秒)文本顯示多長時間</parameter>
+						<parameter name="x">文本顯示位置的X坐標(左側)</parameter>
+						<parameter name="y">文本顯示位置的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<signature>acDisplayText(message, font, size, red, green, blue, duration, x, y)</signature>
+					<description>在屏幕上顯示指定的文本</description>
+					<example>acDisplayText("Hello!", "SHOWCARD GOTHIC", 96, 255, 0, 0, 1000, 100, 300)</example>
+					<snippet>acDisplayText("Message", "Arial", 16, 0, 0, 0, 1000, 0, 0)</snippet>
+				</action>
+				<action name="acKillDisplayText 刪除顯示文本">
+					<parameters/>
+					<return type="number">總是1</return>
+					<signature>acKillDisplayText()</signature>
+					<description>在顯示時長結束前強制關閉acDisplayText顯示的文本</description>
+					<example>acKillDisplayText()</example>
+					<snippet>acKillDisplayText()</snippet>
+				</action>
+				<action name="acEmptyRecycleBins 清空回收站">
+					<parameters />
+					<return type="number">總是1</return>
+					<signature>acEmptyRecycleBins()</signature>
+					<description>調用windows命令清空所有回收站</description>
+					<example>acEmptyRecycleBins()</example>
+					<snippet>acEmptyRecycleBins()</snippet>
+				</action>
+				<action name="acGetSystemMetrics 獲取系統度量">
+					<signature>acGetSystemMetrics(value)</signature>
+					<parameters>
+						<parameter name="value">(number)要檢索的ID(基於Win32規格)</parameter>
+					</parameters>
+					<return type="number">Windows返回的值</return>
+					<description>直接調用GetSystemMetrics，對於找出Windows配置中不同度量是很有用的。</description>
+					<example>acGetSystemMetrics(value)</example>
+					<snippet>acGetSystemMetrics(4) --4 gets the height of a caption area, in pixels</snippet>
+				</action>
+				<action name="acGetPixelBByPoint 通過點獲取藍色值">
+					<signature>acGetPixelBByPoint(x, y)</signature>
+					<parameters>
+						<parameter name="x">點的X坐標(左側)</parameter>
+						<parameter name="y">點的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">0-255</return>
+					<description>獲取指定點顏色的藍色值</description>
+					<example>acGetPixelBByPoint(x, y)</example>
+					<snippet>acGetPixelBByPoint(gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetPixelGByPoint 通過點獲取綠色值">
+					<signature>acGetPixelGByPoint(x, y)</signature>
+					<parameters>
+						<parameter name="x">點的X坐標(左側)</parameter>
+						<parameter name="y">點的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">0-255</return>
+					<description>獲取指定點顏色的綠色值</description>
+					<example>acGetPixelGByPoint(x, y)</example>
+					<snippet>acGetPixelGByPoint(gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetPixelRByPoint 通過點獲取紅色值">
+					<signature>acGetPixelRByPoint(x, y)</signature>
+					<parameters>
+						<parameter name="x">點的X坐標(左側)</parameter>
+						<parameter name="y">點的Y坐標(頂部)</parameter>
+					</parameters>
+					<return type="number">0-255</return>
+					<description>獲取指定點顏色的紅色值</description>
+					<example>acGetPixelRByPoint(x, y)</example>
+					<snippet>acGetPixelRByPoint(gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acMessageBox 消息框">
+					<signature>acMessageBox(message, title, style)</signature>
+					<parameters>
+						<parameter name="message">要顯示的主要信息</parameter>
+						<parameter name="title">窗口標題</parameter>
+						<parameter name="style">整數(基於Win32規格)代表消息框的風格，包括圖標、按鈕和默認按鈕。nil沒有風格（只有確定按鈕）</parameter>
+					</parameters>
+					<return type="number">消息框返回的值，如果指定風格，將返回被點擊的按鈕(如「是」/「否」，則返回值表示按鈕被點擊)</return>
+					<description>顯示標準的Windows消息框，可以自定義圖標和按鈕的風格。</description>
+					<example>acMessageBox(message, title, style)</example>
+					<snippet>acMessageBox("Your message here!", "Title Text", nil) --sample doesn't set a message box style</snippet>
+				</action>
+				<action name="acGetProcessIDFromPattern 通過模板獲取PID">
+					<signature>acGetProcessIDFromPattern(filepattern)</signature>
+					<parameters>
+						<parameter name="filepattern">要搜索的名稱或正則表達式</parameter>
+					</parameters>
+					<return type="number">如果找到返回PID，否則返回0</return>
+					<description>判斷是否有匹配文件模板的進程正在運行。文件模板可以是可執行文件的確切名稱，或正則表達。</description>
+					<example>acGetProcessIDFromPattern(filepattern)</example>
+					<snippet>acGetProcessIDFromPattern("note.*") --sample matches first EXE that begins with "note" (notepad.exe, for example)</snippet>
+				</action>
+				<action name="acGetWindowFromProcessID 通過PID獲取窗口句柄">
+					<signature>acGetWindowFromProcessID(processID)</signature>
+					<parameters>
+						<parameter name="processID">尋找窗口時使用的PID</parameter>
+					</parameters>
+					<return type="number">返回第一個進程優先級最高的窗口的句柄，如果找不到則返回nil。</return>
+					<description>搜索所屬PID中優先級最高的窗口。如果找到返回句柄，否則返回nil。</description>
+					<example>acGetWindowFromProcessID(processID)</example>
+					<snippet>acGetWindowFromProcessID(123) --123 would need to be replaced with an actual process ID</snippet>
+				</action>
+				<action name="acRunProgram 運行程序">
+					<signature>acRunProgram(fullpath, parameters, seconds, style)</signature>
+					<parameters>
+						<parameter name="fullpath">完整EXE文件路徑，需要轉換反斜槓(C:\windows\notepad.exe需要寫成C:\\windows\\notepad.exe)</parameter>
+						<parameter name="parameters">傳遞給該程序的命令行參數</parameter>
+						<parameter name="seconds">等待程序退出秒數(獲取退出代碼)，如果持續時間過去程序仍在運行，則返回0</parameter>
+						<parameter name="style">程序窗口運行方式(常規，最小化，最大化等)，使用微軟網站的nCmdShow值</parameter>
+					</parameters>
+					<return type="number">0或由程序返回代碼(如果持續時間結束前存在)</return>
+					<description>運行程序</description>
+					<example>acRunProgram(fullpath, parameters, seconds, style)</example>
+					<snippet>acRunProgram("c:\\windows\\notepad.exe","",0, 1) --sample runs Notepad, assuming it's in the location specified</snippet>
+				</action>
+				<action name="acShellExecute 控制運行">
+					<signature>acShellExecute(verb, file, parameters, directory, style)</signature>
+					<parameters>
+						<parameter name="verb">edit, explore, find, open, print. 詳細信息在MSDN上搜索ShellExecute</parameter>
+						<parameter name="file">要打開的文件或文件夾。除非參數指定目錄否則將使用當前目錄</parameter>
+						<parameter name="parameters">(可選) 傳遞給該程序的命令行參數</parameter>
+						<parameter name="directory">(可選) 指定工作目錄</parameter>
+						<parameter name="style">程序窗口運行方式(常規，最小化，最大化等)，使用微軟網站的nCmdShow值</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>指定的文件或對像執行指定的操作。例如，指定一個MS Word文檔「打開」，它將會在MS Word中打開。打開EXE文件也可以，類似於acRunProgram。</description>
+					<example>acShellExecute(verb, file, parameters, directory, style)</example>
+					<snippet>acShellExecute("open", "C:\\windows\\", "", "", 1) --sample opens the Windows folder</snippet>
+				</action>
+				<action name="acLockWindows 鎖定Windows">
+					<signature>acLockWindows()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>鎖定Windows，相當按了WIN+L</description>
+					<example>acLockWindows()</example>
+					<snippet>acLockWindows()</snippet>
+				</action>
+				<action name="acIsImmersiveProcess 判斷沉浸式程序">
+					<signature>acIsImmersiveProcess(hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="hwndTarget">窗口句柄，nil使用X/Y坐標定位</parameter>
+						<parameter name="x">定位程序窗口的X坐標</parameter>
+						<parameter name="y">定位程序窗口的Y坐標</parameter>
+					</parameters>
+					<return type="number">0不是，1是</return>
+					<description>判斷程序是否沉浸式。（Windows 8 Metro應用/App Store程序）</description>
+					<example>acIsImmersiveProcess(hwndTarget, x, y)</example>
+					<snippet>acIsImmersiveProcess(nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetFileVersion 獲取文件版本">
+					<signature>acGetFileVersion(file, hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="file">文件路徑; ""將基於窗口句柄或XY坐標指定文件</parameter>
+						<parameter name="hwndTarget">窗口句柄; nil將使用XY坐標定位窗口</parameter>
+						<parameter name="x">被定位窗口的X坐標</parameter>
+						<parameter name="y">被定位窗口的Y坐標</parameter>
+					</parameters>
+					<return type="string"></return>
+					<description>獲取指定文件的文件版本，或擁有該窗口的文件的文件版本。</description>
+					<example>acGetFileVersion(file, hwndTarget, x, y)</example>
+					<snippet>acGetFileVersion("", nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acGetFileProductVersion 獲取文件產品版本">
+					<signature>acGetFileProductVersion(file, hwndTarget, x, y)</signature>
+					<parameters>
+						<parameter name="file">文件路徑; ""將基於窗口句柄或XY坐標指定文件</parameter>
+						<parameter name="hwndTarget">窗口句柄; nil將使用XY坐標定位窗口</parameter>
+						<parameter name="x">被定位窗口的X坐標</parameter>
+						<parameter name="y">被定位窗口的Y坐標</parameter>
+					</parameters>
+					<return type="string"></return>
+					<description>獲取指定文件的文件產品版本，或擁有該窗口的文件的文件產品版本。</description>
+					<example>acGetFileProductVersion(file, hwndTarget, x, y)</example>
+					<snippet>acGetFileProductVersion("", nil, gsx, gsy) --sample uses the gesture start coordinates (gsx and gsy)</snippet>
+				</action>
+				<action name="acInputBox 輸入框">
+					<signature>acInputBox(title, message, default, delim)</signature>
+					<parameters>
+						<parameter name="title">窗口標題</parameter>
+						<parameter name="message">提示消息</parameter>
+						<parameter name="default">輸入框默認信息</parameter>
+						<parameter name="delim">如果指定，default參數會從這些字符分割並生成下拉菜單。</parameter>
+					</parameters>
+					<return type="string"></return>
+					<description>顯示一個窗口，接受用戶輸入。</description>
+					<example>acInputBox(title, message, default, delim)</example>
+					<snippet>acInputBox("Feedback", "Hi! Please enter your thoughts below.", "StrokesPlus is great!", "")</snippet>
+				</action>
+				<action name="acSetDisplayGamma 設置動態灰度">
+					<signature>acSetDisplayGamma(red, green, blue)</signature>
+					<parameters>
+						<parameter name="red">新紅伽瑪值(0 - 255)</parameter>
+						<parameter name="green">新綠伽瑪值(0 - 255)</parameter>
+						<parameter name="blue">新藍伽瑪值(0 - 255)</parameter>
+					</parameters>
+					<return type="string"></return>
+					<description>如果顯卡支持，調整整個桌面的動態灰度。</description>
+					<example>acSetDisplayGamma(red, green, blue)</example>
+					<snippet>acSetDisplayGamma(128,128,128) --sets the gamma evenly across all colors at the 50% baseline</snippet>
+				</action>
+				<action name="acGetNumber 獲取數值">
+				<signature>acGetNumber()</signature>
+				<parameters />
+				<return type="number">前一個調用acSetNumber存儲的數值</return>
+				<description>獲取當前存儲於S +進程的數值。這裡唯一的目的是讓兩個lua狀態之間的溝通。</description>
+				<example>acGetNumber()</example>
+				<snippet>acGetNumber() --sample retrieves the number previously stored by calling acSetNumber</snippet>
+				</action>				
+				<action name="acSetNumber 設置數值">
+				<signature>acSetNumber(value)</signature>
+				<parameters>
+				<parameter name="value">要存儲到S+內存的數值</parameter>
+				</parameters>
+				<return type="number">總是1</return>
+				<description>存儲數值到S+進程。這裡唯一的目的是讓兩個lua狀態之間的溝通。</description>
+				<example>acSetNumber(number)</example>
+				<snippet>acSetNumber(1) --sample stores the number 1 in S+, use acGetNumber to retrieve value</snippet>
+				</action>	
+				<action name="acGetNumberVariable 獲取數值變量">
+				<signature>acGetNumberVariable(name)</signature>
+				<parameters>
+				<parameter name="name">用於獲取在S+內存中的數值的變量名稱</parameter>
+				</parameters>
+				<return type="number">之前調用acSetNumberVariable存儲的值</return>
+				<description>獲取存儲在S+進程中該變量名的數值</description>
+				<example>acGetNumberVariable("Test")</example>
+				<snippet>acGetNumberVariable("Test") --sample retrieves the number previously stored in the "Test" variable by calling acSetNumberVariable</snippet>
+				</action>
+				<action name="acSetNumberVariable 設置數值變量">
+				<signature>acSetNumberVariable(name, value)</signature>
+				<parameters>
+				<parameter name="name">用於存儲到S+內存中的數值的變量名稱</parameter>
+				<parameter name="value">存儲到S+內存中的數值</parameter>
+				</parameters>
+				<return type="number">1 為成功, 0 為失敗</return>
+				<description>將該變量名的數值存儲到S+進程</description>
+				<example>acSetNumberVariable("Test", 123)</example>
+				<snippet>acSetNumberVariable("Test", 123) --sample stores the number (123) into the "Test" variable in S+ memory.</snippet>
+				</action>
+								<action name="acGetStringVariable 獲取字符串變量">
+				<signature>acGetStringVariable(name)</signature>
+				<parameters>
+				<parameter name="name">用於獲取在S+內存中的字符串的變量名稱</parameter>
+				</parameters>
+				<return type="number">之前調用acSetStringVariable存儲的值</return>
+				<description>獲取存儲在S+進程中該變量名的字符串</description>
+				<example>acGetStringVariable("Test")</example>
+				<snippet>acGetStringVariable("Test") --sample retrieves the string previously stored in the "Test" variable by calling acSetStringVariable</snippet>
+				</action>	
+								<action name="acSetStringVariable 設置字符串變量">
+				<signature>acSetStringVariable(name, value)</signature>
+				<parameters>
+				<parameter name="name">用於存儲到S+內存中的字符串的變量名稱</parameter>
+				<parameter name="value">存儲到S+內存中的字符串</parameter>
+				</parameters>
+				<return type="number">1 為成功, 0 為失敗</return>
+				<description>將該變量名的字符串存儲到S+進程</description>
+				<example>acSetStringVariable("Test", "Hello)</example>
+				<snippet>acSetStringVariable("Test", "Hello") --sample stores the string ("Hello") into the "Test" variable in S+ memory.</snippet>
+				</action>					
+				<action name="acExpandEnvironmentString 打開環境變量位置">
+				<signature>acExpandEnvironmentString(string)</signature>
+				<parameters>
+				<parameter name="string">控制環境變量的字符串</parameter>
+				</parameters>
+				<return type="string">被打開的環境變量位置</return>
+				<description>打開被字符串控制的Windows環境變量位置。例子, "%windir%" 字符串將打開Windows目錄(如 "C:\Windows")</description>
+				<example>acExpandEnvironmentString(string)</example>
+				<snippet>local winDir = acExpandEnvironmentString("%windir%") --sets winDir to the Windows installation directory path.</snippet>
+				</action>			
+			</actions>
+		</group>
+		<group name="---- 16.Windows消息操作 ----">
+			<actions>
+				<action name="acPostMessage Post信息">
+					<signature>acPostMessage(hwndTarget, MessageID, wParam, lParam)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被發送消息的目標窗口的句柄</parameter>
+						<parameter name="MessageID">(整數)要發送的消息ID</parameter>
+						<parameter name="wParam">(整數)要發送的wParam</parameter>
+						<parameter name="lParam">(整數)要發送的lParam</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>這是一個非常簡單的形式，不允許在wParam和lParam中使用複雜的數據結構。</description>
+					<example>acPostMessage(hwndTarget, MessageID, wParam, lParam)</example>
+					<snippet>acPostMessage(hwndTarget, MessageID, wParam, lParam) --this snippet is not functional, this is an advanced function that can't have a working snippet</snippet>
+				</action>
+				<action name="acSendMessage Send信息">
+					<signature>acSendMessage(hwndTarget, MessageID, wParam, lParam)</signature>
+					<parameters>
+						<parameter name="hwndTarget">被發送消息的目標窗口的句柄</parameter>
+						<parameter name="MessageID">(整數)要發送的消息ID</parameter>
+						<parameter name="wParam">(整數)要發送的wParam</parameter>
+						<parameter name="lParam">(整數)要發送的lParam</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>這是一個非常簡單的形式，不允許在wParam和lParam中使用複雜的數據結構。</description>
+					<example>acSendMessage(hwndTarget, MessageID, wParam, lParam)</example>
+					<snippet>acSendMessage(hwndTarget, MessageID, wParam, lParam) --this snippet is not functional, this is an advanced function that can't have a working snippet</snippet>
+				</action>
+			</actions>
+		</group>
+		<group name="---- 17.StrokesPlus控制操作 ----">
+			<actions>
+				<action name="acShowAbout 顯示關於">
+					<signature>acShowAbout()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>顯示關於選項卡</description>
+					<example>acShowAbout()</example>
+					<snippet>acShowAbout()</snippet>
+				</action>
+				<action name="acShowActions 顯示配置操作">
+					<signature>acShowActions()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>顯示配置操作選項卡</description>
+					<example>acShowActions()</example>
+					<snippet>acShowActions()</snippet>
+				</action>
+				<action name="acShowHotkeys 顯示配置快捷鍵">
+					<signature>acShowHotkeys()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>顯示配置快捷鍵選項卡</description>
+					<example>acShowHotkeys()</example>
+					<snippet>acShowHotkeys()</snippet>
+				</action>
+				<action name="acShowIgnoreList 顯示忽略清單">
+					<signature>acShowIgnoreList()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>顯示忽略清單選項卡</description>
+					<example>acShowIgnoreList()</example>
+					<snippet>acShowIgnoreList()</snippet>
+				</action>
+				<action name="acShowPrefs 顯示首選項">
+					<signature>acShowPrefs()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>顯示首選項選項卡</description>
+					<example>acShowPrefs()</example>
+					<snippet>acShowPrefs()</snippet>
+				</action>
+				<action name="acShowSettings 顯示主窗口">
+					<signature>acShowSettings()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>顯示主窗口</description>
+					<example>acShowSettings()</example>
+					<snippet>acShowSettings()</snippet>
+				</action>
+				<action name="acDisable 禁用S+">
+					<signature>acDisable()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>禁用StrokesPlus。</description>
+					<example>acDisable()</example>
+					<snippet>acDisable()</snippet>
+				</action>
+				<action name="acDisableNext 禁用下一個手勢">
+					<signature>acDisableNext()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>禁用下一個手勢</description>
+					<example>acDisableNext()</example>
+					<snippet>acDisableNext()</snippet>
+				</action>
+				<action name="acDisableCapture 禁用鼠標手勢">
+					<signature>acDisableCapture()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>禁止strokesplus捕獲鼠標手勢，直到用快捷鍵調用acEnableCapture()，或Lua狀態初始化。</description>
+					<example>acDisableCapture()</example>
+					<snippet>acDisableCapture()</snippet>
+				</action>
+				<action name="acEnableCapture 啟用鼠標手勢">
+					<signature>acEnableCapture()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>在acDisableCapture()調用後，允許strokesplus捕獲鼠標手勢。</description>
+					<example>acEnableCapture()</example>
+					<snippet>acEnableCapture()</snippet>
+				</action>
+				<action name="acDisableHotkey 禁用某快捷鍵">
+					<signature>acDisableHotkey()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>註銷快捷鍵。hkid會自動輸入。</description>
+					<example>acDisableHotkey(hkid)</example>
+					<snippet>acDisableHotkey(hkid) --hkid is passed into the hotkey's script, you do not need to change this line. </snippet>
+				</action>
+				<action name="acEnableHotkey 啟用某快捷鍵">
+					<signature>acEnableHotkey()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>註冊快捷鍵。hkid會自動輸入。</description>
+					<example>acEnableHotkey(hkid)</example>
+					<snippet>acEnableHotkey(hkid) --hkid is passed into the hotkey's script, you do not need to change this line. </snippet>
+				</action>
+				<action name="acRelayGesture 轉發手勢">
+					<signature>acRelayGesture()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>轉發最後一個手勢，使另一個應用程序可以處理。這只適用於配置一個鼠標鍵為手勢鍵，不重播修飾鍵。</description>
+					<example>acRelayGesture()</example>
+					<snippet>acRelayGesture()</snippet>
+				</action>
+				<action name="acGetDrawColor 獲取手勢顏色">
+				<signature>acGetDrawColor()</signature>
+				<parameters />
+				<return type="string"></return>
+				<description>返回當前手勢顏色的hex字符串 (如 "#38A9FF").</description>
+				<example>acGetDrawColor()</example>
+				<snippet>acGetDrawColor()</snippet>
+				</action>
+				<action name="acSetDrawColor 設置手勢顏色">
+				<signature>acSetDrawColor(colorstring)</signature>
+				<parameters>
+				<parameter name="colorstring">新手勢顏色的hex字符串 (如 "#38A9FF")</parameter>
+				</parameters>
+				<return type="string"></return>
+				<description>設置新手勢顏色為指定hex字符串RGB顏色</description>
+				<example>acSetDrawColor(colorstring)</example>
+				<snippet>acSetDrawColor("#38A9FF") --Sets the stroke color to the default blue.</snippet>
+				</action>
+				<action name="acReloadConfig 重載配置">
+					<signature>acReloadConfig()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>指示StrokesPlus重載配置文件(StrokesPlus.xml)</description>
+					<example>acReloadConfig()</example>
+					<snippet>acReloadConfig()</snippet>
+				</action>
+				<action name="acToggleTrayIcon 顯示/隱藏托盤圖標">
+					<signature>acToggleTrayIcon(state)</signature>
+					<parameters>
+						<parameter name="state">	-1 只隱藏
+	0 顯示/隱藏
+	1 只顯示</parameter>
+					</parameters>
+					<return type="number">總是1</return>
+					<description>切換是否隱藏StrokesPlus托盤圖標。也可以通過按下CTRL+SHIFT+WIN+S實現</description>
+					<example>acToggleTrayIcon()</example>
+					<snippet>acToggleTrayIcon()</snippet>
+				</action>
+				<action name="acExit 退出">
+					<signature>acExit()</signature>
+					<parameters/>
+					<return type="number">總是1</return>
+					<description>退出StrokesPlus</description>
+					<example>acExit()</example>
+					<snippet>acExit()</snippet>
+				</action>
+			</actions>
+		</group>
+	</groups>
+</actionshelp>
